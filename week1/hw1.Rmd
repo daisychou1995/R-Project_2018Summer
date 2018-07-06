@@ -13,22 +13,23 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Arithmetic 
 
 ```
-* Addition + 
-* Subtraction -
-* Multiplication *  
-* Division / 
-* Exponentiation ^  (e.g. 3^2=9, 12^12=144)
-* Modulo %% (e.g.12%%12=0,8%%5=3)
+ Addition + 
+ Subtraction -
+ Multiplication *  
+ Division / 
+ Exponentiation ^  (e.g. 3^2=9, 12^12=144)
+ Modulo %% (e.g.12%%12=0,8%%5=3)
 #只能是數值(不可以用"six"取代6)
 ```
-
+ 
 ### Variable assignment
-
+ 
 ```
-* <-
+ <-
   1  x <- 42
   2  x
   [1]42
+```
 
 ### Basic types
 
