@@ -8,11 +8,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Intro to R
-<<<<<<< HEAD
- # eng
-=======
 
->>>>>>> dc73c2737871076acac9a40e5fa23dc551eda3de
+ # eng
+ 
 ```{r cars}
 summary(cars)
 ```
