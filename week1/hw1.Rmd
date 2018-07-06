@@ -23,10 +23,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
  
 ### Variable assignment變數
- 
+'文字' <-  '數值' 或 '邏輯值' 或 '文字'
 ```
  <-
- '文字' <- '數值'或'邏輯值'或'文字'
  e.g. 1  x <- 42
       2  x
       [1]42
