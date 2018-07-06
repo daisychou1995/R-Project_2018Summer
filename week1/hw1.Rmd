@@ -9,9 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Intro to R
 
-x <- 42
-x
- 
+
 ```{r cars}
 summary(cars)
 ```
