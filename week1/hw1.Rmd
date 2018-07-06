@@ -8,16 +8,16 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Intro to R
-###Arithmetic 
-     + (Addition)
-     - (Subtraction)
-     * (Multiplication)  
+### Arithmetic 
+* + (Addition)
+* - (Subtraction)
+* * (Multiplication)  
      / (Division) 
     ^ (Exponentiation) e.g. 3^2=9, 12^12=144
     %% (Modulo)
    #只能是數值(不可以用"six"取代6)
  
-Variable assignment
+### Variable assignment
     
    <-
     1  x <- 42
