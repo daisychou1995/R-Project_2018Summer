@@ -30,6 +30,8 @@ knitr::opts_chunk$set(echo = TRUE)
   2  x
   [1]42
 
+### Basic types
+
 * “ ”
   e.g. “abc”: the quotation marks indicate that “abc” is a character.
 ```
