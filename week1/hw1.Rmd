@@ -25,9 +25,9 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
  <-
  '文字' <-  '數值' 或 '邏輯值' 或 '文字'
- e.g. 1  x <- 42
-      2  x
-      [1]42
+ e.g.1  x <- 42
+     2  x
+     [1]42
 ```
 
 ### Basic types 基本資料類別
@@ -44,11 +44,24 @@ class()
 ## Vector 向量
 
 
-### Creat a vector
+### Create a vector
 ```
 c()
-使用向量儲存資料,括弧中的元素用逗號分隔
+使用向量儲存資料,括弧中的元素用逗號分隔(元素包括'數值'或'邏輯值'或'文字)
 character_vector <- c("a", "b", "c")
 ```
 
+### Naming a vector
+```
+name()
+用來為各個元素命名
+e.g.1 a_vector <- c(140, -50, 20, -120, 240)
+    2 names(days_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+    3 names(a_vector) <- days_vector
 
+    a_vector
+    Monday  Tuesday Wednesday Thursday Friday
+      -140     -50         20     -120    240
+ ```
+
+### Calculating total winnings
