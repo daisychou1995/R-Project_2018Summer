@@ -47,7 +47,7 @@ class()
 ### Create a vector
 ```
 c()
-使用向量儲存所選的資料,括弧中的元素用逗號分隔(元素包括'數值'或'邏輯值'或'文字)
+使用向量儲存創造的資料,括弧中的元素用逗號分隔(元素包括'數值'或'邏輯值'或'文字)
 character_vector <- c("a", "b", "c")
 ```
 
@@ -106,4 +106,12 @@ e.g.selection_vector <- a_vector > 0
    *則a_vector[selection_vector]只會選出selection_vector中為TRUE的元素*
 ```
 
-# Matrices 矩陣
+## Matrices 矩陣
+
+
+### What's a matrix?
+```
+matrix()
+byrow = TRUE 以列的方向     byrow = FALSE 以欄的方向
+nrow = 整數(n個列)
+```
