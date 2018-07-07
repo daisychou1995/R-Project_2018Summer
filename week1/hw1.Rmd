@@ -115,3 +115,22 @@ matrix()
 byrow = TRUE 以列的方向     byrow = FALSE 以欄的方向
 nrow = 整數(n個列)
 ```
+
+### Naming a matrix
+```
+rownames(  被命名的matrix列  )
+colnames(  被命名的matrix欄  )
+dimnames = list(c(rownames),c(colnames))
+```
+
+### Calculating the worldwide box office
+```
+rowSum()  將同列數值相加
+```
+
+### Adding a column for the worldwide box office
+```
+big_matrix <- cbind(vector1,vector2,matrix1,matrix2...)  將分開的向量或矩陣組合成同一矩陣,矩陣的印出會按照在cbind()中的順序排出
+```
+
+### Adding a row
