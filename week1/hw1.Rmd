@@ -44,3 +44,11 @@ class()
 ## Vector 向量
 
 
+### Creat a vector
+```
+c()
+使用向量儲存資料,括弧中的元素用逗號分隔
+character_vector <- c("a", "b", "c")
+```
+
+
