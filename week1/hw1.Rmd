@@ -123,7 +123,7 @@ colnames(  被命名的matrix欄  )
 dimnames = list(c(rownames),c(colnames))
 ```
 
-### Calculating 
+### Calculating matrix elemets
 ```
 rowSums()  將同列數值相加
 colSums()  將同欄數值相加
@@ -137,4 +137,19 @@ big_matrix <- cbind(vector1,vector2,matrix1,matrix2...)
 rbind 反之,以列的方向組合成同一矩陣
 ```
 
+### Selection of matrix elements
+```
+e.g.a_matrix[ a , b ]  a列b欄的元素
+    a_matrix[  a:b ,c:d ]  a到b列,c到d欄的所有元素
+            [a,]選擇a列的所有元素 
+            [,a]選擇b欄的所有元素
+```
 
+## Factor 因素向量
+因素向量是用來儲存類別型變數的統計資料，
+類別型變數與連續型變數最主要的差異在於類別型變數有類別個數的上限，而連續型變數則會有無窮多的個數。
+
+### What's a factor and why would you use it?
+```
+factor() 用來統整向量中的類別
+a nominal categorical variable and an ordinal categorical variable 分為名目類別型變數與順序類別型變數
