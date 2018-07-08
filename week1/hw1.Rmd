@@ -64,30 +64,33 @@ e.g.1 a_vector <- c(140, -50, 20, -120, 240)
       -140     -50         20     -120    240
  ```
 
-### Calculating total winnings
+### sum()
 ```
 sum()
 將所有向量中的數值相加
 ```
 
-### Comparing total winnings
+### 比較
 ```
 > 大於符號 
 < 小於符號
 ```
 
-### Vector selection: the good times
+### vector 的 []
 ```
 []
-在向量中選擇一個元素,括號中索引值必為整數或是文字
+選擇一個元素,括號中索引值必為整數或是文字
 注意:選擇第一個元素為[1],不像其他程式語言第一個索引值為0
 [c()]
 選擇兩個以上不連續的索引值或文字
 [:]
 選擇兩個以上連續的索引值或文字
 e.g.a_vector[1:10]選擇a_vector中從1到10(包含1和10)之間的所有元素
-mean()
-用來算平均數
+```
+
+### mean()
+```
+mean()用來算平均數
 ```
 
 ### Selection by comparison
@@ -116,28 +119,28 @@ byrow = TRUE 以列的方向     byrow = FALSE 以欄的方向
 nrow = 整數(n個列)
 ```
 
-### Naming a matrix
+### 命名列row及欄colmn
 ```
 rownames(  被命名的matrix列  )
 colnames(  被命名的matrix欄  )
 dimnames = list(c(rownames),c(colnames))
 ```
 
-### Calculating matrix elemets
+### rowSums() 及 colSums()
 ```
 rowSums()  將同列數值相加
 colSums()  將同欄數值相加
 ```
 
-### Adding a column/row
+### cbind() 及 rbind()
 ```
-cbind
+cbind()
 big_matrix <- cbind(vector1,vector2,matrix1,matrix2...)  
 將分開的向量或矩陣'以欄的方向'組合成同一矩陣,矩陣的印出會按照在cbind()中的順序排出
-rbind 反之,以列的方向組合成同一矩陣
+rbind() 反之,以列的方向組合成同一矩陣
 ```
 
-### Selection of matrix elements
+### matrix 的 []
 ```
 e.g.a_matrix[ a , b ]  a列b欄的元素
     a_matrix[  a:b ,c:d ]  a到b列,c到d欄的所有元素
@@ -155,15 +158,20 @@ factor() 用來統整向量中的類別
 a nominal categorical variable and an ordinal categorical variable 分為名目類別型變數與順序類別型變數
 ```
 
-### Factor levels
+### levels()
 ```
 levels()  用來改變因素向量級別的名稱
 注意原級別名稱是按照英文字母順序排列,所以改名稱時也要按照此順序對應
 ```
 
-### Summarizing a factor
+### summary()
 ```
 summary()用來分析與統整資料
+```
+
+### 印出NA
+```
+[1]NA 印出此結果代表這些factor的比較是無意義的
 ```
 
 ### Ordered factors
@@ -173,9 +181,52 @@ ordered=FALSE  無意義
 ```
 
 ## Data frames 資料框
+可將不同資料類型存在一起，相較於矩陣和向量只能存一種資料類型
+不同欄可為不同類型的資料，但每一列為同類型
 
-
-### What's a data frame?
+### head() 及 tail()
+```
+head() 印出前幾筆觀測值,預設是六筆
+tail() 印出最後幾組觀測值,預設是六筆
 ```
 
+### str()
 ```
+str()  用來快速了解資料的架構
+```
+
+### Creating a data frame
+```
+data.fame()  和矩陣很像,差別在於data.fame()每一行資料可為不同類別 
+```
+
+### $
+```
+只抓欄不能抓列
+e.g.planets_df[,"diameter"] 等同 planets_df$diameter
+```
+
+### data frame 的 []
+```
+注意:當[]用在data frame/matrix元素為邏輯值時,只會印出TRUE的元素
+```
+
+### subset()
+```
+比[]更精明的方式選擇一組資料
+e.g.planets_df[rings_vector, ] 等同 subset(planets_df, subset = rings)
+```
+
+### order()
+```
+將資料排名,預設是1為最小,數值以外的順序則由1開始排
+a[order(a)] 則會印出從1,2,3...按照順序排的a元素
+```
+
+## Lists 清單
+
+
+### Lists, why would you need them?
+
+
+
