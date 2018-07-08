@@ -171,3 +171,11 @@ summary()用來分析與統整資料
 ordered=TRUE,levels=c() 括弧內放的級別名稱為由小到大,印出的結果只用'<'呈現
 ordered=FALSE  無意義
 ```
+
+## Data frames 資料框
+
+
+### What's a data frame?
+```
+
+```
