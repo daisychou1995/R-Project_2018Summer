@@ -123,9 +123,10 @@ colnames(  被命名的matrix欄  )
 dimnames = list(c(rownames),c(colnames))
 ```
 
-### Calculating the worldwide box office
+### Calculating 
 ```
-rowSum()  將同列數值相加
+rowSums()  將同列數值相加
+colSums()  將同欄數值相加
 ```
 
 ### Adding a column/row
