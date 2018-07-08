@@ -128,10 +128,12 @@ dimnames = list(c(rownames),c(colnames))
 rowSum()  將同列數值相加
 ```
 
-### Adding a column for the worldwide box office
+### Adding a column/row
 ```
+- cbind
 big_matrix <- cbind(vector1,vector2,matrix1,matrix2...)  
-將分開的向量或矩陣組合成同一矩陣,矩陣的印出會按照在cbind()中的順序排出
+將分開的向量或矩陣'以欄的方向'組合成同一矩陣,矩陣的印出會按照在cbind()中的順序排出
+- rbind 反之,以列的方向組合成同一矩陣
 ```
 
-### Adding a row
+
