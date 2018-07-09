@@ -4,9 +4,6 @@ output: html_document
 date: "20180709" 
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 # R概論 note
 
 ## Intro to R
