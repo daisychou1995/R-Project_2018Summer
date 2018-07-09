@@ -10,11 +10,12 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 # Intermeiate R note
 
-## == 等於 != 不等於
-
-
-```{r cars}
-summary(cars)
+## 比大小得出邏輯值
+```{r}
+*提問用* == 等於   != 不等於
+e.g."character" == "character" 按照字首順序比大小(愈後的字母愈大,字首相同則比字母數量)
+e.g.TRUE < FALSE 
+    [1] FALSE     因為TRUE coerces to 1, FALSE coerces to 0
 ```
 
 ## Including Plots
