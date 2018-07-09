@@ -1,11 +1,13 @@
 ---
 title: "hw1"
 output: html_document
+date:20180709
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+# R概論 note
 
 ## Intro to R
 
@@ -171,7 +173,7 @@ summary()用來分析與統整資料
 
 ### 印出NA
 ```
-[1]NA 印出此結果代表這些factor的比較是無意義的
+印出此結果代表這些factor的比較是無意義的
 ```
 
 ### Ordered factors
@@ -197,7 +199,7 @@ str()  用來快速了解資料的架構
 
 ### Creating a data frame
 ```
-data.fame()  和矩陣很像,差別在於data.fame()每一行資料可為不同類別 
+data.fame()  和矩陣很像,差別在於data.fame()每一欄資料可為不同類別,(同一欄為同一類別)
 ```
 
 ### $
@@ -227,6 +229,24 @@ a[order(a)] 則會印出從1,2,3...按照順序排的a元素
 
 
 ### Lists, why would you need them?
+清單可結合各種類型的資料
 
+### list()
+```
+建立清單,任何資料都可儲存於清單
+```
 
+### 清單命名
+```
+my_list <- list(name1 = your_comp1, 
+                name2 = your_comp2)
+                
+my_list <- list(your_comp1, your_comp2)  兩著皆可
+```
 
+### [[ ]]
+```
+e.g.在清單中,
+shining_list$a  等同  shining_list[["a"]]
+為何在習題中輸入shining_list[1] 會和 shining_list[[1]] 出現同樣結果?????
+```
