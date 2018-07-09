@@ -114,8 +114,8 @@ e.g.selection_vector <- a_vector > 0
 ### What's a matrix?
 ```{r}
 matrix()
-byrow = TRUE 以列的方向     byrow = FALSE 以欄的方向
-nrow = 整數(n個列)
+byrow = TRUE 以列的方向     byrow = FALSE 以欄的方向  注意:沒有 bycol
+nrow = 整數(n個列), ncol = 整數(n個欄) 
 ```
 
 ### 命名列row及欄colmn
