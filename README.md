@@ -8,11 +8,11 @@ I like to learn new things.This is my first time writing programs and I will try
 
 ## Week1
 - 課中
-  註冊 GitHub,Data Camp
-  練習建立Repositry
+  -註冊 GitHub,Data Camp
+  -練習建立Repositry
 - 在家
-  學習筆記 [hw1](https://daisychou1995.github.io/R-Project_2018Summer/week1/hw1.html)
-  安裝RStudio,R語言
+  -學習筆記 [hw1](https://daisychou1995.github.io/R-Project_2018Summer/week1/hw1.html)
+  -安裝RStudio,R語言
   
 ## Week
 - 課
