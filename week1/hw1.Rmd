@@ -4,6 +4,9 @@ output: html_document
 date: "20180709" 
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 # R概論 note
 
 ## Intro to R
@@ -248,3 +251,6 @@ e.g.在清單中,
 shining_list$a  等同  shining_list[["a"]]
 為何在習題中輸入shining_list[1] 會和 shining_list[[1]] 出現同樣結果?????
 ```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
