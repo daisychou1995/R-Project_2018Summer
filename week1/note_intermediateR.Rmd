@@ -14,7 +14,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Conditionals and Control Flow
 TRUE 和　FALSE 在提問指的是合不合理
 
-### 提問(邏輯值):比大小
+### Relational Operators
+提問(邏輯值):比大小
 ```{r}
 *提問用* == 等於   != 不等於
 e.g."character" == "character" 按照字首順序比大小(愈後的字母愈大,字首相同則比字母數量)
@@ -22,12 +23,48 @@ e.g.TRUE < FALSE
     [1] FALSE     因為TRUE coerces to 1, FALSE coerces to 0
 ```
 
-### 使用 &, |, !,
+### Logical Operators
 ```{r}
 &&　或　||：代表詢問類型中的第一項是否符合'＆'或'｜'
 And operator: &
 Or operator: |
 Not operator: !
 ```
+
+### The if statement
+```{r}
+if (condition) {
+  expr
+}
+- 添加 else(只有在'一個if'下才能使用'一個else')
+if (condition) {
+  expr1
+} else {
+  expr2
+}
+- 兩個以上的 else
+if (condition1) {
+  expr1
+} else if (condition2) {
+  expr2
+} else if (condition3) {
+  expr3
+} else {
+  expr4
+}
+注意:此情況下的印出只會顯示'順序最前且為符合'的結果,後面符合的結果皆不顯示
+```
+
+## Loops　迴圈
+
+
+### While loops
+```{r}
+while (condition) {
+  expr
+}
+注意：loop時要在最後加一個不合理的收尾，否則會無限印出　
+```
+
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
