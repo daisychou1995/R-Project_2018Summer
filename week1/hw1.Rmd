@@ -20,13 +20,13 @@ knitr::opts_chunk$set(echo = TRUE)
  Division / 
  Exponentiation ^  (e.g. 3^2=9, 12^12=144)
  Modulo %% (e.g.12%%12=0,8%%5=3)
- * 只能是數值(不可以用"six"取代6)
+ # 只能是數值(不可以用"six"取代6)
 ```
  
 ### Variable assignment 變數
 ```{r}
  <-
- '文字' <-  '數值' 或 '邏輯值' 或 '文字'
+# '文字' <-  '數值' 或 '邏輯值' 或 '文字'
  e.g.1  x <- 42
      2  x
      [1]42
@@ -34,13 +34,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Basic types 基本資料類別
 ```{r}
-“ ”
-  e.g. “abc”: 用雙引號包起來的文字、數值、符號,告訴R字串
+# “ ”用雙引號包起來的文字、數值、符號,告訴R字串
+  e.g. “abc”
 ```
 ```{r}
 檢視資料類別:
 class()
-在'class()'的括弧中,輸入想檢查的'數值'或'邏輯值'或'文字'
+# 在'class()'的括弧中,輸入想檢查的'數值'或'邏輯值'或'文字'
 ```
 
 ## Vector 向量
