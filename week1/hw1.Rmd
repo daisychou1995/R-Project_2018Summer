@@ -14,32 +14,33 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Arithmetic 運算
 ```{r}
- Addition + 
- Subtraction -
- Multiplication *  
- Division / 
- Exponentiation ^  (e.g. 3^2=9, 12^12=144)
- Modulo %% (e.g.12%%12=0,8%%5=3)
+ # Addition + 
+ # Subtraction -
+ # Multiplication *  
+ # Division / 
+ # Exponentiation ^ (e.g. 3 ^ 2=9, 12 ^ 12=144)
+ # Modulo %% (e.g.12 %% 12=0,8%%5=3)
  # 只能是數值(不可以用"six"取代6)
 ```
  
 ### Variable assignment 變數
+<-
 ```{r}
- <-
 # '文字' <-  '數值' 或 '邏輯值' 或 '文字'
- e.g.1  x <- 42
-     2  x
-     [1]42
+x <- 42
+x
+# print out
+42
 ```
 
 ### Basic types 基本資料類別
 ```{r}
 # “ ”用雙引號包起來的文字、數值、符號,告訴R字串
-  e.g. “abc”
+ “abc”
 ```
-```{r}
-# 檢視資料類別:
 class()
+```{r}
+# 檢視資料類別
 # 在'class()'的括弧中,輸入想檢查的'數值'或'邏輯值'或'文字'
 ```
 
@@ -47,28 +48,27 @@ class()
 
 
 ### Create a vector
-```{r}
 c()
+```{r}
 # 使用向量儲存創造的資料,括弧中的元素用逗號分隔(元素包括'數值'或'邏輯值'或'文字)
 character_vector <- c("a", "b", "c")
 ```
 
 ### Naming a vector
-```{r}
 name()
+```{r}
 # 用來為各個元素命名
-e.g.1 a_vector <- c(140, -50, 20, -120, 240)
-    2 names(days_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
-    3 names(a_vector) <- days_vector
-    # print out
-    a_vector
-    Monday  Tuesday Wednesday Thursday Friday
-      -140     -50         20     -120    240
+a_vector <- c(140, -50, 20, -120, 240)
+names(days_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
+names(a_vector) <- days_vector
+# print out
+a_vector
+Monday  Tuesday Wednesday Thursday Friday
+  -140     -50         20     -120    240
  ```
 
 ### sum()
 ```{r}
-sum()
 # 將所有向量中的數值相加
 ```
 
@@ -79,17 +79,18 @@ sum()
 ```
 
 ### vector 的 []
-```{r}
 []
+```{r}
 # 選擇一個元素,括號中索引值必為整數或是文字
-  注意:選擇第一個元素為[1],不像其他程式語言第一個索引值為0
-  
+# 注意:選擇第一個元素為[1],不像其他程式語言第一個索引值為0
+```
 [c()]
+```{r}
 # 選擇兩個以上不連續的索引值或文字
-
+```
 [:]
+```{r}
 # 選擇兩個以上連續的索引值或文字
-
 # 選擇a_vector中從1到10(包含1和10)之間的所有元素
 e.g.a_vector[1:10]
 ```
@@ -108,19 +109,18 @@ e.g.a_vector[1:10]
 # == for equal to each other
 # != not equal to each other 不等於
 
-e.g.selection_vector <- a_vector > 0
+selection_vector <- a_vector > 0
     Monday   Tuesday Wednesday  Thursday    Friday 
       TRUE     FALSE      TRUE     FALSE      TRUE
-   # 假設selection_vector的邏輯值是以上,
-     則a_vector[selection_vector]只會選出selection_vector中為TRUE的元素
+   # 假設selection_vector的邏輯值是以上,則a_vector[selection_vector]只會選出selection_vector中為TRUE的元素
 ```
 
 ## Matrices 矩陣
 
 
 ### What's a matrix?
-```{r}
 matrix()
+```{r}
 # byrow = TRUE 以列的方向     byrow = FALSE 以欄的方向  注意:沒有 bycol
 # nrow = 整數(n個列), ncol = 整數(n個欄) 
 ```
@@ -139,8 +139,8 @@ matrix()
 ```
 
 ### cbind() 及 rbind()
-```{r}
 cbind()
+```{r}
 big_matrix <- cbind(vector1,vector2,matrix1,matrix2...)  
 # 將分開的向量或矩陣'以欄的方向'組合成同一矩陣,矩陣的印出會按照在cbind()中的順序排出
 # rbind() 反之,以列的方向組合成同一矩陣
@@ -148,10 +148,10 @@ big_matrix <- cbind(vector1,vector2,matrix1,matrix2...)
 
 ### matrix 的 []
 ```{r}
-# e.g.a_matrix[ a , b ]  a列b欄的元素
-      a_matrix[  a:b ,c:d ]  a到b列,c到d欄的所有元素
-            [a,]選擇a列的所有元素 
-            [,a]選擇b欄的所有元素
+# a_matrix[ a , b ]  a列b欄的元素
+# a_matrix[  a:b ,c:d ]  a到b列,c到d欄的所有元素
+# [a,]選擇a列的所有元素 
+# [,a]選擇b欄的所有元素
 ```
 
 ## Factor 因素向量
@@ -159,8 +159,8 @@ big_matrix <- cbind(vector1,vector2,matrix1,matrix2...)
 類別型變數與連續型變數最主要的差異在於類別型變數有類別個數的上限，而連續型變數則會有無窮多的個數。
 
 ### What's a factor and why would you use it?
-```{r}
 factor() 
+```{r}
 # 用來統整向量中的類別
 # a nominal categorical variable and an ordinal categorical variable 分為名目類別型變數與順序類別型變數
 ```
@@ -188,8 +188,8 @@ factor()
 ```
 
 ## Data frames 資料框
-#可將不同資料類型存在一起，相較於矩陣和向量只能存一種資料類型
-#同欄可為不同類型的資料，但每一列為同類型
+可將不同資料類型存在一起，相較於矩陣和向量只能存一種資料類型
+同欄可為不同類型的資料，但每一列為同類型
 
 ### head() 及 tail()
 ```{r}
@@ -203,15 +203,15 @@ factor()
 # 用來快速了解資料的架構
 ```
 
-### Creating a data frame
+### data.fame()  
 ```{r}
-# data.fame()  和矩陣很像,差別在於data.fame()每一欄資料可為不同類別,(同一欄為同一類別)
+# 和矩陣很像,差別在於data.fame()每一欄資料可為不同類別,(同一欄為同一類別)
 ```
 
 ### $
 ```{r}
 # 只抓欄不能抓列
-  e.g.planets_df[,"diameter"] 等同 planets_df$diameter
+# e.g.planets_df[,"diameter"] 等同 planets_df$diameter
 ```
 
 ### data frame 的 []
@@ -222,7 +222,7 @@ factor()
 ### subset()
 ```{r}
 # 比[]更精明的方式選擇一組資料
-  e.g.planets_df[rings_vector, ] 等同 subset(planets_df, subset = rings)
+# e.g.planets_df[rings_vector, ] 等同 subset(planets_df, subset = rings)
 ```
 
 ### order()
@@ -235,7 +235,7 @@ factor()
 
 
 ### Lists, why would you need them?
-#清單可結合各種類型的資料
+清單可結合各種類型的資料
 
 ### list()
 ```{r}
@@ -253,6 +253,6 @@ my_list <- list(your_comp1, your_comp2)
 ### [[ ]]
 ```{r}
 # e.g.在清單中,
-      shining_list$a  等同  shining_list[["a"]]
+#     shining_list$a  等同  shining_list[["a"]]
 # 為何在習題中輸入shining_list[1] 會和 shining_list[[1]] 出現同樣結果?????
 ```
