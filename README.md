@@ -14,7 +14,7 @@ I like to learn new things.This is my first time writing programs and I will try
   - 學習筆記 [hw1](https://daisychou1995.github.io/R-Project_2018Summer/week1/hw1.html)
   - 安裝RStudio,R語言
   
-## Week
+## Week2
 - 課中
   - 練習做圖表
   - 練習網路爬蟲
