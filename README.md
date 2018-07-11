@@ -15,5 +15,9 @@ I like to learn new things.This is my first time writing programs and I will try
   - 安裝RStudio,R語言
   
 ## Week
-- 課
+- 課中
+  - 練習做圖表
+  - 練習網路爬蟲
+- 在家
+
   
