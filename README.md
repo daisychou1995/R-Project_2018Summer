@@ -11,7 +11,7 @@ I like to learn new things.This is my first time writing programs and I will try
   - 註冊 GitHub,Data Camp
   - 練習建立Repositry
 - 在家
-  - 學習筆記1 [hw1](https://daisychou1995.github.io/R-Project_2018Summer/hw1.html)
+  - 學習筆記1 [hw1](https://daisychou1995.github.io/R-Project_2018Summer/week1/hw1.html)
   - 安裝RStudio,R語言
   
 ## Week2
@@ -19,5 +19,5 @@ I like to learn new things.This is my first time writing programs and I will try
   - 練習做圖表
   - 練習網路爬蟲
 - 在家
-  - 學習筆記2 [note_intermediateR](https://daisychou1995.github.io/R-Project_2018Summer/note_intermediateR.html)
+  - 學習筆記2 [note_intermediateR](https://daisychou1995.github.io/R-Project_2018Summer/week1/note_intermediateR.html)
   
