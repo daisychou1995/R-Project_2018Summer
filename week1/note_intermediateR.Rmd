@@ -30,18 +30,21 @@ TRUE 和　FALSE 在提問指的是合不合理
 
 ### The if statement
 假設提問
-- if (condition) {
-  expr
-  }
-
+```{r}
+if (condition) {
+expr
+}
+```
 - 添加 else(只有在'一個if'下才能使用'一個else')
+```{r}
 if (condition) {
   expr1
 } else {
   expr2
 }
-
+```
 - 兩個以上的 else
+```{r}
 if (condition1) {
   expr1
 } else if (condition2) {
@@ -51,6 +54,7 @@ if (condition1) {
 } else {
   expr4
 }
+```
 - 注意:此情況下的印出只會顯示'順序最前且為符合'的結果,後面符合的結果皆不顯示
 
 
@@ -62,11 +66,12 @@ if (condition1) {
 while (condition) {
   expr
 }
-注意：loop時要在最後加一個不合理的收尾，否則會無限印出
-
-print(paste("文字"，變數))
-用此函數將假設的變數和文字一起印出
 ```
+- 注意：loop時要在最後加一個不合理的收尾，否則會無限印出
+
+- print(paste("文字"，變數))
+  - 用此函數將假設的變數和文字一起印出
+
 
 ### For loop
 ```{r}
