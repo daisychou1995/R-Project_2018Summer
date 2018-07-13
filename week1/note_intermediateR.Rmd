@@ -15,25 +15,24 @@ knitr::opts_chunk$set(echo = TRUE)
 TRUE 和　FALSE 在提問指的是合不合理
 
 ### Relational Operators
-- 提問(邏輯值):比大小
-  - 提問用  == 等於   != 不等於
-  - e.g."character" == "character" 按照字首順序比大小(愈後的字母愈大,字首相同則比字母數量) 
-  - e.g.TRUE < FALSE
-  - # print out
-  -     FALSE     因為TRUE coerces to 1, FALSE coerces to 0
+提問(邏輯值):比大小
+- 提問用  == 等於   != 不等於
+- e.g."character" == "character" 按照字首順序比大小(愈後的字母愈大,字首相同則比字母數量) 
+- e.g.TRUE < FALSE
+- # print out
+-     FALSE     因為TRUE coerces to 1, FALSE coerces to 0
 
 ### Logical Operators
-- &&　或　||：代表詢問類型中的第一項是否符合'＆'或'｜'
-  - And operator: &
-  - Or operator: |
-  -Not operator: !
+&&　或　||：代表詢問類型中的第一項是否符合'＆'或'｜'
+- And operator: &
+- Or operator: |
+- Not operator: !
 
 ### The if statement
-```{r}
 假設提問
-if (condition) {
+- if (condition) {
   expr
-}
+  }
 
 - 添加 else(只有在'一個if'下才能使用'一個else')
 if (condition) {
@@ -52,8 +51,8 @@ if (condition1) {
 } else {
   expr4
 }
-注意:此情況下的印出只會顯示'順序最前且為符合'的結果,後面符合的結果皆不顯示
-```
+- 注意:此情況下的印出只會顯示'順序最前且為符合'的結果,後面符合的結果皆不顯示
+
 
 ## Loops　迴圈
 
