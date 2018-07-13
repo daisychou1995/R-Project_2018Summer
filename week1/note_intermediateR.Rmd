@@ -30,13 +30,13 @@ TRUE 和　FALSE 在提問指的是合不合理
 
 ### The if statement
 假設提問
-```{r}
+```
 if (condition) {
 expr
 }
 ```
 - 添加 else(只有在'一個if'下才能使用'一個else')
-```{r}
+```
 if (condition) {
   expr1
 } else {
@@ -44,7 +44,7 @@ if (condition) {
 }
 ```
 - 兩個以上的 else
-```{r}
+```
 if (condition1) {
   expr1
 } else if (condition2) {
@@ -62,7 +62,7 @@ if (condition1) {
 
 
 ### While loops
-```{r}
+```
 while (condition) {
   expr
 }
@@ -74,7 +74,7 @@ while (condition) {
 
 
 ### For loop
-```{r}
+```
 e.g.
 primes <- c(2, 3, 5, 7, 11, 13)
 
@@ -91,7 +91,7 @@ for (i in 1:length(primes)) {
 ```
 
 ## Loop over a matrix
-```{r}
+```
 for (var1 in seq1) {
   for (var2 in seq2) {
     expr
@@ -99,4 +99,4 @@ for (var1 in seq1) {
 }
 
 ```
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
