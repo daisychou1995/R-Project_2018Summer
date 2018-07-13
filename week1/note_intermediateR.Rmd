@@ -91,13 +91,19 @@ for (i in 1:length(primes)) {
 注意:若為list要用[[i]]
 ```
 
-## Loop over a matrix
+### Loop over a matrix
+matrix資料有'列'和'欄',要在迴圈提問矩陣資料則須設定兩個for
 ```
 for (var1 in seq1) {
   for (var2 in seq2) {
     expr
   }
 }
-
+var1 in seq1 放列的數值
+var2 in seq2 放欄的數值
 ```
-
+### 'break' and 'next'
+```
+break 用來在特條件下中止執行迴圈
+next 用來在特定條件下跳過迴圈,繼續執行下個不符合特定條件的迴圈
+```
