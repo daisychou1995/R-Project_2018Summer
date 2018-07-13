@@ -21,14 +21,12 @@ TRUE 和　FALSE 在提問指的是合不合理
   - e.g.TRUE < FALSE 
   -     [1] FALSE     因為TRUE coerces to 1, FALSE coerces to 0
 
-
 ### Logical Operators
-```{r}
+
 &&　或　||：代表詢問類型中的第一項是否符合'＆'或'｜'
 And operator: &
 Or operator: |
 Not operator: !
-```
 
 ### The if statement
 ```{r}
