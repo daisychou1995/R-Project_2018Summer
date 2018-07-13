@@ -15,13 +15,12 @@ knitr::opts_chunk$set(echo = TRUE)
 TRUE 和　FALSE 在提問指的是合不合理
 
 ### Relational Operators
-提問(邏輯值):比大小
-```{r}
-提問用* == 等於   != 不等於
-e.g."character" == "character" 按照字首順序比大小(愈後的字母愈大,字首相同則比字母數量)
-e.g.TRUE < FALSE 
+- 提問(邏輯值):比大小
+  - 提問用  == 等於   != 不等於
+    e.g."character" == "character" 按照字首順序比大小(愈後的字母愈大,字首相同則比字母數量) 
+    e.g.TRUE < FALSE 
     [1] FALSE     因為TRUE coerces to 1, FALSE coerces to 0
-```
+
 
 ### Logical Operators
 ```{r}
