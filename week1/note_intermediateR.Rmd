@@ -123,3 +123,20 @@ na.rm = TRUE  na指缺失數據, rm是remove縮寫,所以這條命令指的是�
 
 ### Required, or optional?
 尚未完成
+
+### Write your own function
+```
+- my_fun <- function(arg1, arg2) {
+  body
+}  用來新增自製函數
+
+- return()  用來設定函數的結果值
+  e.g.my_fun <- function(x, y = 1) {
+        if(y == 0){
+        return(0)
+        }
+        x * y + x /y
+      }
+- 新函數:sample()
+      sd()  標準差:位於中間位置的數之值 
+```
