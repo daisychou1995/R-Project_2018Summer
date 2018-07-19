@@ -158,8 +158,8 @@ qplot(mtcars$wt, mtcars$hp) 建立一個plot由括弧中的兩個變數(mtcars�
 
 ### lapply
 ```
-- lapply(X, FUN)
-以簡化的方式執行將list/vector的所有元素帶入同一函數
+- lapply(X, FUN) 輸出是必為列表（list）
+以簡化的方式執行將list/vector的所有元素帶入同一函數(直接以function形式的函數也可)
 X為list/vector,FUN為任何函數
 - strsplit()
 將一個字串分成多個字串
@@ -171,9 +171,20 @@ e.g.strsplit("Are you ready?", "?")
     [[1]]
     [1] "Are you ready"
 strsplit 函數的輸出是一個列表（list）
+- tolower() 將文字轉成小寫
+- toupper() 反之
 ```
 
-### 
+### Use lapply with additional arguments
 ```
+e.g.multiply <- function(x, factor) {
+      x * factor
+    }
+    lapply(list(1,2,3), multiply, factor = 3)
+```
+
+### Apply functions that return NULL
+```
+NULL 用比喻來說NA是已經挖好了洞，只是裡面沒有東西，即為'缺失值'。而NULL指的是'連洞都沒有'。
 
 ```
