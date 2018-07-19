@@ -223,9 +223,36 @@ e.g.# print out
 
 ### vapply
 ```
-
+vapply(X, FUN, FUN.VALUE, ..., USE.NAMES = TRUE)
+FUN.VALUE  a (generalized) vector; a template for the return value from FUN
+e.g.vapply(temp, basics, numeric(3)) 
+    numeric(3)是指每一欄有3個數值
+注意:vapply和sapply最大的差別在於vapply的印出會說明錯誤在哪
 ```
 
+## Utilities
 
 
+### Mathematical utilities
+```
+abs(): Calculate the absolute value. 絕對值
+sum(): Calculate the sum of all the values in a data structure.
+mean(): Calculate the arithmetic mean.
+round(): Round the values to 0 decimal places by default. 四捨五入
+seq(): Generate sequences, by specifying the from, to, and by arguments. 數列
+seq(x, y, by = +/-n)
+rep(): Replicate複製 elements of vectors and lists. 
+sort(): Sort a vector in ascending order. Works on numerics, but also on character strings and logicals.
+rev(): Reverse the elements in a data structures for which reversal is defined.使元素順序顛倒
+append(): Merge vectors or lists. 
+          decreasing = TRUE, 降序元素
+is.*(): Check for the class of an R object.
+as.*(): Convert an R object from one class to another.
+unlist(): Flatten (possibly embedded) lists to produce a vector.
+```
+
+### Regular Expressions
+```
+
+```
 
