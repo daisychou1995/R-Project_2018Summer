@@ -171,6 +171,7 @@ e.g.strsplit("Are you ready?", "?")
     [[1]]
     [1] "Are you ready"
 strsplit 函數的輸出是一個列表（list）
+- unlist() 將list的結果變成vector/matrix
 - tolower() 將文字轉成小寫
 - toupper() 反之
 ```
@@ -186,5 +187,11 @@ e.g.multiply <- function(x, factor) {
 ### Apply functions that return NULL
 ```
 NULL 用比喻來說NA是已經挖好了洞，只是裡面沒有東西，即為'缺失值'。而NULL指的是'連洞都沒有'。
+```
 
+### How to use sapply
+```
+supply()  用來簡化印出結果(相較於lapply,supply的印出為vector/matrix)
+min() 最小值(可用在數字或字母)
+max() 最大值(同上)
 ```
