@@ -158,12 +158,22 @@ qplot(mtcars$wt, mtcars$hp) 建立一個plot由括弧中的兩個變數(mtcars�
 
 ### lapply
 ```
-lapply(X, FUN)
+- lapply(X, FUN)
 以簡化的方式執行將list/vector的所有元素帶入同一函數
 X為list/vector,FUN為任何函數
+- strsplit()
+將一個字串分成多個字串
+預設使用正規表示法（regular expression = regex）分隔字串，要將指定的分隔字串視為一般的文字，可以加上 fixed = TRUE 參數。
+e.g.strsplit("Are you ready?", "?")
+    [[1]]
+    [1] "A" "r" "e" " " "y" "o" "u" " " "r" "e" "a" "d" "y" "?"
+    > strsplit("Are you ready?", "?", fixed = TRUE)
+    [[1]]
+    [1] "Are you ready"
+strsplit 函數的輸出是一個列表（list）
 ```
 
-###
+### 
 ```
 
 ```
