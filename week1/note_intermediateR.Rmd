@@ -67,12 +67,13 @@ if (condition1) {
 while (condition) {
   expr
 }
-```
-- 注意：loop時要在最後加一個不合理的收尾，否則會無限印出
 
-- print(paste("文字"，變數))
+注意：loop時要在最後加一個不合理的收尾，否則會無限印出
+
+print() 打印出表達式(只能一個)
+print(paste("文字"，變數))
   - 用此函數將假設的變數和文字一起印出
-
+```
 
 ### For loop
 ```
@@ -195,3 +196,36 @@ supply()  用來簡化印出結果(相較於lapply,supply的印出為vector/matr
 min() 最小值(可用在數字或字母)
 max() 最大值(同上)
 ```
+
+### sapply can't simplify, now what?
+```
+identical(x,y) 分辨x和y是否完全相同(相同:TRUE,反之)
+```
+
+### sapply with functions that return NULL
+```
+cat()  和print()相似,只是cat可以打印出多個表達式且印出不會有[1]和"",需要一个行結束符'\n'。
+e.g.> cat(x,"abc","de\n")
+      1 2 3 abc de
+      
+NULL 的結果無法簡化,所以還是會印出list
+e.g.# print out
+    The average temperature is 4.8 
+    ...
+    The average temperature is 4.6
+    ...
+    [[1]]
+    NULL
+    ...
+    [[7]] 
+    NULL
+```
+
+### vapply
+```
+
+```
+
+
+
+
