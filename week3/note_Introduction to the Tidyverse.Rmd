@@ -12,7 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 # note_Introduction to the Tidyverse
 
 ## Data wrangling
-library(dplyr)
+library(gapminder)
+library(dplyr) 裝載此安裝包才能使用以下功能
 
 ### The filter verb
 ```
@@ -33,5 +34,47 @@ arrange(desc()) 此為降序
 
 ### The mutate verb
 ```
-mutate()  
+mutate() 用來增加欄位或改變某一欄整體的數字 
+```
+
+
+## Data visualization
+library(ggplot2)
+
+### Visualizing with ggplot2
+```
+- ggplot()
+scatter plot散佈圖  e.g.ggplot(gapminder_1952, aes(x = pop, y = gdpPercap)) + geom_point()
+- geom_point()顯示點的函數
+```
+
+### Log scales
+```
+- ggplot(gapminder_1952, aes(x = pop, y = lifeExp)) + geom_point() + 
+ scale_x_log10() #指的是scale比例 x軸設為log10(即為10的一次方)為單位製圖
+注意:若想要xy軸都以log10為單位製圖則 + scale_x_log10() + scale_y_log10() 
+1e+3為1000, 1e+6為1000000
+```
+
+### Additional aesthetics
+```
+將點用顏色區分 color = 欄位,放在aes中
+將點加上大小分別 size = 欄位,放在aes中
+e.g. ggplot(gapminder_1952, aes(x=pop, y=lifeExp, color=continent, size = gdpPercap)) + geom_point() + 
+      scale_x_log10()
+```
+
+### Faceting
+```
+將圖以某欄位做區分 facet_wrap(~ 欄位) 並放在log後
+e.g.ggplot(gapminder_1952, aes(x=pop, y=lifeExp)) + geom_point() + scale_x_log10() + 
+     facet_wrap(~continent)
+```
+
+
+## Grouping and summarizing
+
+### The summarize verb
+```
+
 ```
