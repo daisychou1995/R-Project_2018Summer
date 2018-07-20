@@ -1,0 +1,16 @@
+---
+title: "kaggle Animal"
+author: "chia-i,chou"
+date: "July 18, 2018"
+output: html_document
+---
+
+
+#data From https://www.kaggle.com/mrisdal/quick-dirty-randomforest/data
+```{r setup, include=FALSE}
+AnimalDATA = read.csv('./DATA/ALL/test.csv')
+```
+
+```{r}
+
+```
