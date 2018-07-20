@@ -23,6 +23,6 @@ I like to learn new things.This is my first time writing programs and I will try
   
 ## Week3
 - 課中
- - 練習
+  - 練習
 - 在家
- - 學習筆記3 []
+  - 學習筆記3 []
