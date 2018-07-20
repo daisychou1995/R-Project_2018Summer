@@ -21,7 +21,7 @@ library(dplyr) 裝載此安裝包才能使用以下功能
 iris %>% head() is equivalent to head(iris)
 iris %>% head() %>% summary() is equivalent to summary(head(iris))  寫法為由裡到外
 來源: https://stackoverflow.com/questions/24536154/what-does-mean-in-r
-- filter() 過濾器,用來篩選data frame 裡的特定參數
+- filter(欄位 == 數字) 過濾器,用來篩選data frame 裡的特定參數
 注意:要用"=="而非"="
 e.g.gapminder %>% filter(year == 1957) #想知道gapminder資料裡的year欄位1957的所有資訊
 ```
@@ -39,7 +39,9 @@ mutate() 用來增加欄位或改變某一欄整體的數字
 
 
 ## Data visualization
-library(ggplot2)
+library(gapminder)
+library(dplyr)
+library(ggplot2) 裝載此安裝包才能畫圖
 
 ### Visualizing with ggplot2
 ```
@@ -73,8 +75,30 @@ e.g.ggplot(gapminder_1952, aes(x=pop, y=lifeExp)) + geom_point() + scale_x_log10
 
 
 ## Grouping and summarizing
+library(gapminder)
+library(dplyr)
 
 ### The summarize verb
 ```
+smmarize() 總結
+median() 中位數
+```
 
+### The group_by verb
+```
+group_by(欄位,欄位) 將選擇的欄位的同元素組成一群(可以有多個欄位或單一欄位), 會按照此先後順序印出欄位資訊
+注意:多個欄位用此函數時會以兩個欄位都群組的模式顯示印出
+```
+
+### Visualizing summarized data
+```
+expand_limits(軸=0) 用來將圖表的x或y軸接近交叉處設為0 
+```
+
+## Types of visualizations
+library(dplyr)
+library(ggplot2)
+
+### Line plots
+```
 ```
