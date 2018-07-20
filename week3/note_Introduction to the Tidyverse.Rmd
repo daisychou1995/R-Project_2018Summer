@@ -9,3 +9,29 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# note_Introduction to the Tidyverse
+
+## Data wrangling
+library(dplyr)
+
+### The filter verb
+```
+- >%> 用法
+iris %>% head() is equivalent to head(iris)
+iris %>% head() %>% summary() is equivalent to summary(head(iris))  寫法為由裡到外
+來源: https://stackoverflow.com/questions/24536154/what-does-mean-in-r
+- filter() 過濾器,用來篩選data frame 裡的特定參數
+注意:要用"=="而非"="
+e.g.gapminder %>% filter(year == 1957) #想知道gapminder資料裡的year欄位1957的所有資訊
+```
+
+### The arrange verb
+```
+arrange() 用來在欄位中排資料前後順序,預設值為升序
+arrange(desc()) 此為降序
+```
+
+### The mutate verb
+```
+mutate()  
+```
