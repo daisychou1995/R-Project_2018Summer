@@ -74,6 +74,26 @@ ggplot(comics, aes(x = align, fill = gender)) + geom_bar(position = "fill") + yl
 
 ## Exploring Numerical Data
 ```
-dotplot: geom_dotplot()
-density plot: geom_density() 只有x軸
+- dotplot: geom_dotplot()
+- density plot: geom_density() 只有x軸
+- %in%
+  e.g.data %in% c( ): 指的是在data的c()中的元素
 ```
+
+### Three binwidths
+```
+- 分箱數（bins): 預設值為30即  geom_某圖表(binwidth = 30) 
+  y軸預設數值為0 25 50 75...
+注意: 愈大於30則y軸數值相差愈大(資料愈簡化), 愈小於30則y軸數值相差愈小(資料愈詳細)
+      數字愈大分箱數愈少, 數值愈小分箱數愈多
+```
+
+### Visualization in higher dimensions
+```
+facet_grid( 列元素 , 欄元素 ) 將圖形按照水平和垂直方向進行分類並且使每張圖共享x軸/y軸,
+                             相較於 facet_wrap(~ ),此函數為兩個個維度比wrap多了一維度。
+                               
+```
+## Numerical Summaries
+
+
