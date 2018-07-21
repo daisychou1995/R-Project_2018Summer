@@ -1,0 +1,10 @@
+---
+title: "note_Exploratory Data Analysis"
+author: "chia-i,chou"
+date: "July 21, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
