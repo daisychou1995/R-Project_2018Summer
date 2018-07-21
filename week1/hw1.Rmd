@@ -52,11 +52,11 @@ c()
 ```	 
 使用向量儲存創造的資料,括弧中的元素用逗號分隔(元素包括'數值'或'邏輯值'或'文字)
 character_vector <- c("a", "b", "c")	 
-```	 
+```
  	 
 ### Naming a vector	 
 name()	 
-```	 
+```
 用來為各個元素命名	
 a_vector <- c(140, -50, 20, -120, 240)	 
 names(days_vector) <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")	
@@ -67,30 +67,30 @@ Monday  Tuesday Wednesday Thursday Friday
 ### sum()	 
 ```	 
 將所有向量中的數值相加	
-```	 
+```
  	 
 ### 比較	
-```	
+```
 > 大於符號 	
 < 小於符號	
-```	 
+```
  	 
 ### vector 的 []	
 []	 
-```	 
+```
 選擇一個元素,括號中索引值必為整數或是文字	
 注意:選擇第一個元素為[1],不像其他程式語言第一個索引值為0	
-```	
+```
 [c()]	 
-```	 
+```
 選擇兩個以上不連續的索引值或文字
-```	
+```
  [:]	 
-```	
+```
 選擇兩個以上連續的索引值或文字
 選擇a_vector中從1到10(包含1和10)之間的所有元素	
 e.g.a_vector[1:10]	 
-```	 
+```
  	 
 ### mean()	 
 ```	 
@@ -161,7 +161,7 @@ a nominal categorical variable and an ordinal categorical variable 分為名目�
  	 
 ### levels()	 
 ```
-用來改變因素向量級別的名稱	
+用來改變查詢因素向量級別的名稱,當有NA元素時在查詢時不顯示(即忽略)
 注意:原級別名稱是按照英文字母順序排列,所以改名稱時也要按照此順序對應	
 ```
  	 
@@ -176,7 +176,7 @@ a nominal categorical variable and an ordinal categorical variable 分為名目�
 ```
  	 
 ### Ordered factors	
-```	 
+```
 ordered=TRUE,levels=c() 括弧內放的級別名稱為由小到大,印出的結果只用'<'呈現	
 ordered=FALSE  無意義	
 ```
