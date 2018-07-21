@@ -117,6 +117,7 @@ library(ggplot2)
 ### Boxplots
 ```
 箱型圖 geom_boxplot()
+參考說明:http://blog.pulipuli.info/2016/11/r-draw-box-plot-with-r.html
 ```
 ```{r}
 library(gapminder)
@@ -128,4 +129,10 @@ gapminder_1952 <- gapminder %>%
 
 # Create a boxplot comparing gdpPercap among continents
 ggplot(gapminder_1952, aes(x=continent,y=gdpPercap)) + geom_boxplot() + scale_y_log10()
+```
+
+### Adding a title to your grap
+```
+在最後 + ggtitle("標題") + xlab("x標題") + ylab("y標題")
+注意:xy軸預設為用欄位名稱命名
 ```
