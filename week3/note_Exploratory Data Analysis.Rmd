@@ -25,6 +25,7 @@ table() is a useful way to represent the total counts of observations that fall 
 ```
 
 ### Side-by-side barcharts
+- 在aes()函數裡的fill指的是圖中資料的區分方式
 - 圖1: ggplot(comics, aes(x = gender, fill = align)) + geom_bar(position = "dodge") + theme(axis.text.x = element_text(angle =90))
 - 圖2: ggplot(comics, aes(x = gender, fill = align)) + geom_bar()
 ```{r}
@@ -67,4 +68,12 @@ ggplot(comics, aes(x = align, fill = gender)) + geom_bar()
 # Plot proportion of gender, conditional on align 此情況y軸數字變成比例且每一條齊平
 # ggplot(comics, aes(x = align, fill = gender)) + geom_bar(position = "fill") + ylab("proportion")
 ggplot(comics, aes(x = align, fill = gender)) + geom_bar(position = "fill") + ylab("proportion")
+```
+注意:geom_某圖表(fill= 顏色 )  在圖表含數裡的'fill='代表的是想設定的顏色
+
+
+## Exploring Numerical Data
+```
+dotplot: geom_dotplot()
+density plot: geom_density() 只有x軸
 ```
