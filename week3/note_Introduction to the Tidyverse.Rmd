@@ -81,7 +81,7 @@ library(dplyr)
 ### The summarize verb
 ```
 smmarize() 總結
-median() 中位數
+median() 中位數:位在最中間的數
 ```
 
 ### The group_by verb
@@ -101,4 +101,31 @@ library(ggplot2)
 
 ### Line plots
 ```
+線狀圖 geom_line()
+```
+
+### Bar plots
+```
+條狀圖,起始點必為0  geom_col() 
+```
+
+### Histograms
+```
+直方圖,只有x軸  geom_histogram()
+```
+
+### Boxplots
+```
+箱型圖 geom_boxplot()
+```
+```{r}
+library(gapminder)
+library(dplyr)
+library(ggplot2)
+
+gapminder_1952 <- gapminder %>%
+  filter(year == 1952)
+
+# Create a boxplot comparing gdpPercap among continents
+ggplot(gapminder_1952, aes(x=continent,y=gdpPercap)) + geom_boxplot() + scale_y_log10()
 ```
