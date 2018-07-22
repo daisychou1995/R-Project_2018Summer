@@ -169,9 +169,47 @@ library('dplyr') # data manipulation</code></pre>
 </div>
 <div class="section level2">
 <h2>匯入資料</h2>
-</div>
-<div id="section" class="section level2">
-<h2></h2>
+<pre class="r"><code>titanictest = read.csv('./DATA/ALL/test.csv')
+titanictrain = read.csv('./DATA/ALL/train.csv')
+all_data &lt;- bind_rows(titanictrain, titanictest) # 將兩組乘客資(data.frame)料合併成一個檔,bind_rows在'dylpr'</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): Unequal factor levels: coercing to character</code></pre>
+<pre><code>## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector
+
+## Warning in bind_rows_(x, .id): binding character and factor vector,
+## coercing into character vector</code></pre>
+<pre class="r"><code>str(all_data)  # check</code></pre>
+<pre><code>## 'data.frame':    1309 obs. of  12 variables:
+##  $ PassengerId: int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ Survived   : int  0 1 1 1 0 0 0 0 1 1 ...
+##  $ Pclass     : int  3 1 3 1 3 3 1 3 3 2 ...
+##  $ Name       : chr  &quot;Braund, Mr. Owen Harris&quot; &quot;Cumings, Mrs. John Bradley (Florence Briggs Thayer)&quot; &quot;Heikkinen, Miss. Laina&quot; &quot;Futrelle, Mrs. Jacques Heath (Lily May Peel)&quot; ...
+##  $ Sex        : Factor w/ 2 levels &quot;female&quot;,&quot;male&quot;: 2 1 1 1 2 2 2 2 1 1 ...
+##  $ Age        : num  22 38 26 35 35 NA 54 2 27 14 ...
+##  $ SibSp      : int  1 1 0 1 0 0 0 3 0 1 ...
+##  $ Parch      : int  0 0 0 0 0 0 0 1 2 0 ...
+##  $ Ticket     : chr  &quot;A/5 21171&quot; &quot;PC 17599&quot; &quot;STON/O2. 3101282&quot; &quot;113803&quot; ...
+##  $ Fare       : num  7.25 71.28 7.92 53.1 8.05 ...
+##  $ Cabin      : chr  &quot;&quot; &quot;C85&quot; &quot;&quot; &quot;C123&quot; ...
+##  $ Embarked   : chr  &quot;S&quot; &quot;C&quot; &quot;S&quot; &quot;S&quot; ...</code></pre>
 <pre class="r"><code>set.seed(754)
 
 # Build the model (note: not all possible variables are used)

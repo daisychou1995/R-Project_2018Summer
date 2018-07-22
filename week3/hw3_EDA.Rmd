@@ -8,6 +8,7 @@ output: html_document
 
 ##data From https://www.kaggle.com/mrisdal/exploring-survival-on-the-titanic/data
 
+
 ## 載入安裝包
 ```{r}
 library('ggplot2') # visualization
@@ -19,7 +20,7 @@ library('randomForest') # classification algorithm
 ```
 
 ## 匯入資料
-```{r setup, include=FALSE}
+```{r}
 titanictest = read.csv('./DATA/ALL/test.csv')
 titanictrain = read.csv('./DATA/ALL/train.csv')
 all_data <- bind_rows(titanictrain, titanictest) # 將兩組乘客資(data.frame)料合併成一個檔,bind_rows在'dylpr'
@@ -27,7 +28,7 @@ all_data <- bind_rows(titanictrain, titanictest) # 將兩組乘客資(data.frame
 str(all_data)  # check
 ```
 
-##
+
 ```{r eval =FALSE}
 set.seed(754)
 
