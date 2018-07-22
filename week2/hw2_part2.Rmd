@@ -1,0 +1,39 @@
+---
+title: "hw2_part2_worldcloud"
+author: "chia-i,chou"
+date: "July 22, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# 文字雲練習_坂元裕二
+
+```{r}
+library(jiebaR)
+library(dplyr)
+library(wordcloud)
+wk <- worker()
+
+text <- readLines("words.txt", encoding = "UTF-8")
+
+stopwords <- c("的", "與", "在", "和", "會", "是", "我", "都", "來", "要", "們", "一", "第", "與", "在", "和", "會", "是", "我", "都",                  "來", "要", "們","然","後","時","也","了","而","中","為","卻","讓","又","劇","但","他","最","不","這","個","部","元","就","編",                "坂","二","阪","日","一","裕","年")
+stopwords.pattern <- paste0(stopwords, sep = "|", collapse = "") %>%
+  substr(1, nchar(.) -1)
+
+text <- gsub(stopwords.pattern, " ", text)
+
+seg <- wk[text]
+
+seg <- as.data.frame(table(seg))
+freq <- seg[order(seg$Freq, decreasing = T), ]
+
+wordcloud(freq$seg, freq$Freq,
+          min.freq = 2, random.order = F,
+          color = brewer.pal(8, "Dark2"))
+```
+
+
