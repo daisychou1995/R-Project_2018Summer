@@ -1,0 +1,57 @@
+---
+title: "hw_part1"
+author: "chia-i,chou"
+date: "July 22, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 資料視覺化練習
+
+```{r}
+library(ggplot2)
+ChickWeight 
+```
+
+## 單變數：類別型
+```{r}
+ggplot(data = ChickWeight , aes(x = Diet)) +
+geom_bar(fill = "light pink", colour = "purple")
+```
+
+## 單變數：連續型
+```{r}
+ggplot(data = ChickWeight, aes(x = weight)) +
+geom_histogram()
+```
+
+## 雙變數：連續 vs 連續
+```{r}
+ggplot(data = ChickWeight, aes(x = weight, y=Chick,color=Time)) +
+geom_point()
+```
+
+## 雙變數：離散 vs 連續
+```{r}
+ggplot(ChickWeight, aes(x=Diet, y=weight)) +
+geom_boxplot()
+```
+
+## 多變量(iris)
+```{r}
+library(ggplot2)
+library(GGally)
+library(scales)
+library(memisc)
+iris
+```
+
+```{r}
+set.seed(20180722)
+iris_samp <- iris[sample(1:length(iris$Sepal.Width), 100), ]
+ggpairs(iris_samp,lower= list(continuous = wrap("points", shape = I('.'))),
+        upper = list(combo = wrap("box", outlier.shape = I('.'))))
+```
