@@ -15,5 +15,85 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### Exploring categorical data
 ```
-
+table() is a useful way to represent the total counts of observations that fall into each combination of the levels of categorical variables. 將既有的dataset擷取出想要的'級別欄位'組合成另一dataset
 ```
+
+### droplevels()
+```
+將不要的級別levels 從(data frame中的)factor拿除, 
+搭配 filter(__ != __)使用
+```
+
+### Side-by-side barcharts
+- 在aes()函數裡的fill指的是圖中資料的區分方式
+- 圖1: ggplot(comics, aes(x = gender, fill = align)) + geom_bar(position = "dodge") + theme(axis.text.x = element_text(angle =90))
+- 圖2: ggplot(comics, aes(x = gender, fill = align)) + geom_bar()
+```{r}
+library(comics)
+library(ggplot2)
+library(dplyr)
+ggplot(comics, aes(x = gender, fill = align)) + geom_bar(position = "dodge") + theme(axis.text.x = element_text(angle =90))
+#比較1:上圖為在條狀圖函數裡加 position = "dodge" ,下圖為不加 
+#比較2:上圖為加 theme(axis.text.x = element_text(angle =90))使x軸的分類名稱為90度順時針轉,不加的預設值如下圖
+ggplot(comics, aes(x = gender, fill = align)) + geom_bar()
+```
+
+### Counts vs. proportions
+```
+proportions 比例
+geom_bar(position = "fill") 此情況y軸數字變成比例
+e.g.
+tab <- table(comics$align, comics$gender)
+options(scipen = 999, digits = 3) # simplify display format
+prop.table(tab)     # 在未限定欄或列加起來要為 1 的情況,按所有tab資料進行比例分配
+                    # sum(prop.table(tab))  [1] 1
+prop.table(tab, 2)  # 2: columns sum to 1, 反之 1: row sum to 1
+#print out
+Female     Male    Other
+  Bad     0.082210 0.395160 0.001672
+  Good    0.130135 0.251333 0.000888
+  Neutral 0.043692 0.094021 0.000888
+         
+          Female  Male Other
+  Bad      0.321 0.534 0.485
+  Good     0.508 0.339 0.258
+  Neutral  0.171 0.127 0.258
+```
+```{r}
+# Plot of gender by align
+# ggplot(comics, aes(x = align, fill = gender)) + geom_bar()
+ggplot(comics, aes(x = align, fill = gender)) + geom_bar()
+
+  
+# Plot proportion of gender, conditional on align 此情況y軸數字變成比例且每一條齊平
+# ggplot(comics, aes(x = align, fill = gender)) + geom_bar(position = "fill") + ylab("proportion")
+ggplot(comics, aes(x = align, fill = gender)) + geom_bar(position = "fill") + ylab("proportion")
+```
+注意:geom_某圖表(fill= 顏色 )  在圖表含數裡的'fill='代表的是想設定的顏色
+
+
+## Exploring Numerical Data
+```
+- dotplot: geom_dotplot()
+- density plot: geom_density() 只有x軸
+- %in%
+  e.g.data %in% c( ): 指的是在data的c()中的元素
+```
+
+### Three binwidths
+```
+- 分箱數（bins): 預設值為30即  geom_某圖表(binwidth = 30) 
+  y軸預設數值為0 25 50 75...
+注意: 愈大於30則y軸數值相差愈大(資料愈簡化), 愈小於30則y軸數值相差愈小(資料愈詳細)
+      數字愈大分箱數愈少, 數值愈小分箱數愈多
+```
+
+### Visualization in higher dimensions
+```
+facet_grid( 列元素 , 欄元素 ) 將圖形按照水平和垂直方向進行分類並且使每張圖共享x軸/y軸,
+                             相較於 facet_wrap(~ ),此函數為兩個個維度比wrap多了一維度。
+                               
+```
+## Numerical Summaries
+
+

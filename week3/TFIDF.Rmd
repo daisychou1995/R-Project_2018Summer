@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
+```
 library(bitops)
 library(httr)
 library(RCurl)
@@ -22,8 +22,8 @@ library(jiebaR)
 ```
 
 
-# ³z¹Lª¦¤å§ì¥X¤å³¹¤º¤å¹ïÀ³ªººô§}
-```{r}
+# é€éçˆ¬æ–‡æŠ“å‡ºæ–‡ç« å…§æ–‡å°æ‡‰çš„ç¶²å€
+```
 from <- 1844 # 2018-07-06
 to   <- 1858 # 2018-07-17
 prefix = "https://www.ptt.cc/bbs/Japandrama/index"
@@ -42,8 +42,8 @@ head(data)
 ```
 
 
-# §Q¥Î¤W­±»`¶°ªººô§}§ì¥X¨ä¤º¤å,¨Ã¸ÑªR¤å³¹¤º®e¨Ã«ö·Óhour¦X¨ÖÀx¦s
-```{r}
+# åˆ©ç”¨ä¸Šé¢è’é›†çš„ç¶²å€æŠ“å‡ºå…¶å…§æ–‡,ä¸¦è§£ææ–‡ç« å…§å®¹ä¸¦æŒ‰ç…§houråˆä½µå„²å­˜
+```
 library(dplyr)
 getdoc <- function(url)
 {
@@ -64,4 +64,4 @@ getdoc <- function(url)
 }
 
 sapply(data, getdoc)
-```html
+```
