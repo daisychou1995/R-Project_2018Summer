@@ -20,7 +20,7 @@ I like to learn new things.This is my first time writing programs and I will try
   - 練習網路爬蟲
 - 在家
   - 學習筆記2 [note_intermediateR](https://daisychou1995.github.io/R-Project_2018Summer/week1/note_intermediateR.html)
-  
+  - 作業[hw2_part1](https://daisychou1995.github.io/R-Project_2018Summer/week2/hw2_part1.html)
 ## Week3
 - 課中
   - 練習
