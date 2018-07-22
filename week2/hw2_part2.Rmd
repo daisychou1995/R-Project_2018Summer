@@ -13,6 +13,9 @@ knitr::opts_chunk$set(echo = TRUE)
 # 文字雲練習_坂元裕二
 
 ```{r}
+library(NLP)
+library(tm)
+library(jiebaRD)
 library(jiebaR)
 library(dplyr)
 library(wordcloud)
@@ -20,7 +23,7 @@ wk <- worker()
 
 text <- readLines("words.txt", encoding = "UTF-8")
 
-stopwords <- c("的", "與", "在", "和", "會", "是", "我", "都", "來", "要", "們", "一", "第", "與", "在", "和", "會", "是", "我", "都",                  "來", "要", "們","然","後","時","也","了","而","中","為","卻","讓","又","劇","但","他","最","不","這","個","部","元","就","編",                "坂","二","阪","日","一","裕","年")
+stopwords <- c("的", "與", "在", "和","會","是","我","都","來","要","們","一","第","然","後","時","也","了","而","中","為","卻","讓","又","劇","但","他","最","不","這","個","部","元","就","編","坂","二","阪","日","裕","年")
 stopwords.pattern <- paste0(stopwords, sep = "|", collapse = "") %>%
   substr(1, nchar(.) -1)
 

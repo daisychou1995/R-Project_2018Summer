@@ -1,0 +1,43 @@
+---
+title: "EDA"
+author: "chia-i,chou"
+date: "July 18, 2018"
+output: html_document
+---
+# 心得
+
+##data From https://www.kaggle.com/mrisdal/exploring-survival-on-the-titanic/data
+
+## 載入安裝包
+```{r}
+library('ggplot2') # visualization
+library('ggthemes') # visualization
+library('scales') # visualization
+library('dplyr') # data manipulation
+library('mice') # imputation
+library('randomForest') # classification algorithm
+```
+
+## 匯入資料
+```{r setup, include=FALSE}
+titanictest = read.csv('./DATA/ALL/test.csv')
+titanictrain = read.csv('./DATA/ALL/train.csv')
+all_data <- bind_rows(titanictrain, titanictest) # 將兩組乘客資(data.frame)料合併成一個檔,bind_rows在'dylpr'
+
+str(all_data)  # check
+```
+
+##
+```{r eval =FALSE}
+set.seed(754)
+
+# Build the model (note: not all possible variables are used)
+rf_model <- randomForest(factor(Survived) ~ Pclass + Sex + Age + SibSp + Parch + 
+                                            Fare + Embarked + Title + 
+                                            FsizeD + Child + Mother,
+                                            data = train)
+
+# Show model error
+plot(rf_model, ylim=c(0,0.36))
+legend('topright', colnames(rf_model$err.rate), col=1:3, fill=1:3)
+```
