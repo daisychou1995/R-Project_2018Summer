@@ -27,3 +27,4 @@ I like to learn new things.This is my first time writing programs and I will try
 - 在家
   - 學習筆記3 [note_Introduction_to_the_Tidyverse](https://daisychou1995.github.io/R-Project_2018Summer/week3/note_Introduction_to_the_Tidyverse.html)
   - 學習筆記4
+  - 作業EDA [hw3_EDA]((https://daisychou1995.github.io/R-Project_2018Summer/week3/hw3_EDA.html)
