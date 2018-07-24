@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 # 文字雲練習_坂元裕二
-
+**想要做的文字雲語言要和本機系統語言相同才不會knit出現錯誤
 ```{r}
 library(NLP)
 library(tm)

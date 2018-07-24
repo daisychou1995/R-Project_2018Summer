@@ -1,0 +1,107 @@
+---
+title: "TF_IDF"
+author: "chia-i,chou"
+date: "July 24, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tm)
+library(tmcn)
+library(Matrix)
+library(wordcloud)
+library(NLP)
+library(RColorBrewer)
+library(jiebaR)
+library(jiebaRD)
+```
+## 檔案語言要和本機系統語言一致
+```
+from:https://blog.csdn.net/stat_elliott/article/details/42458487
+tm 有五種資源讀取的方式：
+> getSources()
+[1] "DataframeSource" "DirSource"       "URISource"       "VectorSource"    "XMLSource"    
+
+就.txt文件而言，直接從文件夾讀取： DirSource()
+DirSource()讀取文件夾下所有文件的路徑，然後用Corpus()讀取所有文件路徑和路徑下的内容，並建造資料庫。
+Corpus()的結果是建立一个類似matrix的Corpus集合，一个文件名對應一个文檔内容。
+Corpus()賦值给一个變量以后，例如賦值給“docs”，輸入docs或者docs[1]這種subset模式無法直接查看文檔内容，必需要用到inspect()函數进行文本查看。
+```
+```{r}
+docs.corpus <- Corpus(DirSource("./writer"))
+docs.seg <- tm_map(docs.corpus, segmentCN)
+docs.tdm <- TermDocumentMatrix(docs.seg)
+inspect(docs.tdm)
+```
+##TF_IDF 計算
+```{r}
+docs.tf <- apply(as.matrix(docs.tdm), 2, function(doc) {doc / sum(doc)})
+idf.function <- function(word_doc) { log2( (length(word_doc)+1) / nnzero(word_doc) ) }
+docs.idf <- apply(docs.tdm, 1, idf.function )
+docs.tfidf <- docs.tf * docs.idf
+head(docs.tfidf)
+```
+
+```{r}
+query.tfidf <- function(q){
+  q.position <- which(rownames(docs.tfidf) %in% q)
+  q.tfidf <- docs.tfidf[q.position, ]
+  return (q.tfidf)
+}
+query.tfidf(c("女性", "金句", "真實","愛情","信","洗衣"))
+```
+```{r}
+cos <- function(x, y){
+  return (x %*% y / sqrt(x %*% x * y %*% y))[1, 1]
+}
+# compare with first doc
+docs.cos.sim <- apply(docs.tfidf, 2, cos, y = docs.tfidf[, 1])
+docs.cos.sim
+```
+```{r}
+f <- sort(rowSums(docs.tfidf), decreasing = T)
+docs.df <- data.frame(
+  word = names(f),
+  freq = f
+)
+wordcloud(docs.df$word, docs.df$freq, scale=c(5,0.1), colors=brewer.pal(8, "Dark2"))
+```
+
+#
+```{r}
+library(factoextra)
+docs.pca <- prcomp(docs.tfidf, scale = T)
+fviz_eig(docs.pca)
+```
+```{r}
+fviz_pca_ind(docs.pca, geom.ind = c("point"), col.ind = "cos2")
+```
+
+```{r}
+fviz_pca_var(docs.pca, col.var = "contrib")
+```
+```{r}
+fviz_pca_biplot(docs.pca, geom.ind = "point")
+```
+```{r}
+docs.eig <- get_eig(docs.pca)
+docs.var <- get_pca_var(docs.pca)
+docs.ind <- get_pca_ind(docs.pca)
+```
+
+```{r}
+ind.coord2 <- docs.ind$coord[, 1:2]
+wss <- c()
+for (i in 1:10) { wss[i] <- kmeans(ind.coord2, i)$tot.withinss }
+plot(wss, type = "b")
+```
+
+```{r}
+km <- kmeans(ind.coord2, 3)
+plot(ind.coord2, col = km$cluster)
+points(km$centers, col = 1:3, pch = 8, cex = 2)
+```

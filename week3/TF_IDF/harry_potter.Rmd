@@ -1,0 +1,66 @@
+---
+title: "TF_IDF-book"
+author: "chia-i,chou"
+date: "July 24, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r}
+library(tm)
+library(tmcn)
+library(factoextra)
+library(Matrix)
+library(NLP)
+library(ggplot2)
+```
+
+## Term-Document Matrix
+```{r}
+docs.corpus <- Corpus(DirSource("./harry_potter"))
+docs.seg <- tm_map(docs.corpus, segmentCN)
+docs.tdm <- TermDocumentMatrix(docs.seg)
+```
+
+```{r}
+inspect(docs.tdm)
+```
+
+```{r}
+docs.tf <- apply(as.matrix(docs.tdm), 2, function(doc) {doc / sum(doc)})
+idf.function <- function(word_doc) { log2( (length(word_doc)+1) / nnzero(word_doc) ) }
+docs.idf <- apply(docs.tdm, 1, idf.function)
+docs.tfidf <- docs.tf * docs.idf
+head(docs.tfidf)
+```
+
+```{r}
+query.tfidf <- function(q){
+  q.position <- which(rownames(docs.tfidf) %in% q)
+  q.tfidf <- docs.tfidf[q.position, ]
+  return (q.tfidf)
+}
+query.tfidf(c("Quidditch", " Sirius Black", "Snape"))
+```
+
+```{r}
+docs.tf <- apply(as.matrix(docs.tdm), 2, function(word) { word/sum(word) })
+idf <- function(doc) {
+  return ( log2( length(doc)+1 / nnzero(doc)) )
+}
+docs.idf <- apply(as.matrix(docs.tdm), 1, idf)
+docs.tfidf <- docs.tf * docs.idf
+```
+
+```{r}
+docs.pca <- prcomp(docs.tfidf, scale = T)
+```
+
+```{r}
+fviz_eig(docs.pca)
+```
