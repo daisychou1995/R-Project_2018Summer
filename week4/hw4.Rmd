@@ -1,0 +1,114 @@
+---
+title: "hw4practice"
+author: "chia-i,chou"
+date: "July 25, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library(dplyr)
+```
+## Regression(深度EDA)
+## 資料為105,104,103年內湖木柵北投垃圾焚化廠營運管理及環境品質監測報告
+### From http://data.taipei/opendata/datalist/datasetMeta?oid=3cab0f52-0a0d-4744-9b98-f2ff20c5932c
+```{r}
+trash = read.csv('./data/trash.csv')
+``` 
+
+4.底渣(Incinerator Bottom Ash, IBA)為焚化爐的「爐床篩灰」與「爐尾底渣」合稱，垃圾運入焚化爐經高溫燒結後所產生之不可燃物，約占原本焚化垃圾量的15-20%。
+
+### 資料結構
+```{r}
+str(trash)  # check
+```
+```{r}
+head(trash)
+```
+
+### 基本統計
+```{r}
+summary(trash)
+```
+
+```{rcache=TRUE, warning=FALSE}
+require(ggplot2)
+#將底下的圖設定為黑白配色（theme_bw）
+old <- theme_set(theme_bw())
+```
+## 什麼影響焚化績效?
+- 找差異顯著的分布
+### 焚化廠影響績效嗎？
+1.從不同焚化廠的焚化績效盒鬚圖
+2.畫圖,coord_flip() 函數使xy軸資料對調
+3.結論:從圖中得出,北投績效的中位數最高,內湖最小,木柵第二
+```{r cache=TRUE, warning=FALSE}
+library(ggplot2)
+
+ggplot(data = trash, aes(x = plant , y = incineration_performance )) +
+ geom_boxplot() + coord_flip() +   
+ labs( y = 'incineration_performance', x = 'plant', 
+       title = 'Different Incineration plant  v.s. incineration performance')
+``` 
+### 在95%信賴區間中,各廠的焚化績效之範圍如下
+```{r cache=TRUE, warning=FALSE}
+#以下函式計算95%信賴區間
+with(trash,
+     tapply(incineration_performance, plant,
+     function(x) 
+       c(mean(x) + c(-2, 2) * sd(x)/sqrt(length(x)))))
+```
+## 以下用 t-test 檢驗不同焚化廠是否存在焚化績效差異
+1.內湖v.s.木柵
+```{r cache=TRUE, warning=FALSE}
+neihu.mucha <- trash %>% filter(plant != "北投")
+#此函數會預設進行 Welch 校正，以處理兩樣本變異數不相同的問題
+t.test( incineration_performance~ plant, data = neihu.mucha)
+
+#可加上參數 var.equal=TRUE 來假設變異數同值(不做Welch校正)
+t.test(incineration_performance~ plant, data = neihu.mucha, var.equal = TRUE)
+```
+2.木柵v.s.北投
+```{r cache=TRUE, warning=FALSE}
+mucha.beitou <- trash %>% filter(plant != "內湖")
+#此函數會預設進行 Welch 校正，以處理兩樣本變異數不相同的問題
+t.test( incineration_performance~ plant, data = mucha.beitou)
+
+#可加上參數 var.equal=TRUE 來假設變異數同值(不做Welch校正)
+t.test(incineration_performance~ plant, data = mucha.beitou, var.equal = TRUE)
+```
+
+## Part B. 月份  vs 焚化績效
+```{r}
+library(Hmisc)
+```
+
+```{r}
+#先把父母教育欄位內各個水準順序定下來(order of factors)
+trash$month <- factor(trash$year, 
+                       levels = c("內湖","木柵","北投"))
+
+#看不同月份下的焚化績效平均數
+tapply(trash$incineration_performance, trash$month, mean)
+```
+
+```{r}
+#同父母教育程度下的數學分數平均數，加上信賴區間
+ggplot(data = trash,  
+       aes(x = month, y = incineration_performance )) +
+  stat_summary(fun.data = 'mean_cl_boot', size = 1) +
+  scale_y_continuous(breaks = seq(50,100, by = )) +
+  geom_hline(yintercept = mean(trash$incineration_performance) , 
+             linetype = 'dotted') +
+  labs(x = 'month', y = 'incineration performance') +
+  coord_flip()
+
+```
+
+```{r}
+anova(m1 <- lm(incineration_performance ~ month, data = neihu))
+```
+
+

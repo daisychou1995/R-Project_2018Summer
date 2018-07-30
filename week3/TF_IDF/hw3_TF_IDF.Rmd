@@ -16,8 +16,6 @@ library(Matrix)
 library(wordcloud)
 library(NLP)
 library(RColorBrewer)
-library(jiebaR)
-library(jiebaRD)
 ```
 ## 檔案語言要和本機系統語言一致
 ```
@@ -33,7 +31,9 @@ Corpus()賦值给一个變量以后，例如賦值給“docs”，輸入docs或�
 ```
 ```{r}
 docs.corpus <- Corpus(DirSource("./writer"))
+docs.corpus <- tm_map(docs.corpus, removeNumbers)
 docs.seg <- tm_map(docs.corpus, segmentCN)
+docs.seg
 docs.tdm <- TermDocumentMatrix(docs.seg)
 inspect(docs.tdm)
 ```

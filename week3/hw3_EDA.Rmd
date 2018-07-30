@@ -23,7 +23,7 @@ library('randomForest') # classification algorithm
 ```{r}
 titanictest = read.csv('./DATA/ALL/test.csv')
 titanictrain = read.csv('./DATA/ALL/train.csv')
-full <- bind_rows(titanictrain, titanictest) # 將兩組乘客資(data.frame)料合併成一個檔,bind_rows在'dylpr'
+full <- bind_rows(titanictrain, titanictest) # 將兩組乘客資(data.frame)料合併成一個檔,bind_rows在'dplyr'
 
 str(full)  # check
 ```
@@ -97,7 +97,7 @@ mosaicplot(table(full$FsizeD, full$Survived), main='Family Size by Survival', sh
 ```
 
 
-## 分類出小孩和媽媽
+## 分類出小孩和大人
 ```{r}
 # Create the column child, and indicate whether child or adult
 full$Child[full$Age < 18] <- 'Child'
