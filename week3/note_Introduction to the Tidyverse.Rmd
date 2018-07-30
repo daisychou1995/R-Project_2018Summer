@@ -136,3 +136,8 @@ ggplot(gapminder_1952, aes(x=continent,y=gdpPercap)) + geom_boxplot() + scale_y_
 在最後 + ggtitle("標題") + xlab("x標題") + ylab("y標題")
 注意:xy軸預設為用欄位名稱命名
 ```
+
+### 補充
+```
+coord_flip() 函數使xy軸資料對調(x軸必為factor)
+```
