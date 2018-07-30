@@ -21,6 +21,7 @@ I like to learn new things.This is my first time writing programs and I will try
 - 在家
   - 學習筆記2 [note_intermediateR](https://daisychou1995.github.io/R-Project_2018Summer/week1/note_intermediateR.html)
   - 作業[hw2_part1](https://daisychou1995.github.io/R-Project_2018Summer/week2/hw2_part1.html)
+  - 作業[hw2_part2](https://daisychou1995.github.io/R-Project_2018Summer/week2/hw2_part2.html)
 ## Week3
 - 課中
   - 練習EDA探索性資料分析(Exploratory Data Analysis)
@@ -29,4 +30,4 @@ I like to learn new things.This is my first time writing programs and I will try
   - 學習筆記3 [note_Introduction_to_the_Tidyverse](https://daisychou1995.github.io/R-Project_2018Summer/week3/note_Introduction_to_the_Tidyverse.html)
   - 學習筆記4
   - 作業EDA [hw3_EDA](https://daisychou1995.github.io/R-Project_2018Summer/week3/hw3_EDA.html)
-  - 作業TF-IDF_PCA_KMeans
+  - 作業TF-IDF_PCA_KMeans [hw3_TF_IDF](https://daisychou1995.github.io/R-Project_2018Summer/week3/TF_IDF/hw3_TF_IDF.html)
