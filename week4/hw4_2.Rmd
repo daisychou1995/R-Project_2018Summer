@@ -1,0 +1,159 @@
+---
+title: "hw4practice"
+author: "chia-i,chou"
+date: "July 25, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+library(dplyr)
+library(LaF)
+```
+## Regression(深度EDA)
+## 資料為2011~2017職業傷害件數對行業部門
+### From http://www.divxy123.ca/ReportBuilder2017/Pages/report_builder.php
+```{r}
+od = read.csv('./data/occupational disease2.csv')
+``` 
+
+4.底渣(Incinerator Bottom Ash, IBA)為焚化爐的「爐床篩灰」與「爐尾底渣」合稱，垃圾運入焚化爐經高溫燒結後所產生之不可燃物，約占原本焚化垃圾量的15-20%。
+
+### 資料結構
+```{r}
+od = od %>% filter( Gender == "Male" | Gender == "Female"  )
+str(od)  # check
+```
+```{r}
+od$total= od$X2011  + od$X2012 + od$X2013 + od$X2014 + od$X2015 + od$X2016 + od$X2017  
+head(od)
+```
+
+### 基本統計
+```{r}
+summary(od)
+```
+
+```{rcache=TRUE, warning=FALSE}
+require(ggplot2)
+#將底下的圖設定為黑白配色（theme_bw）
+old <- theme_set(theme_bw())
+```
+### 性別v.s. 件數
+1.從不同焚化廠的焚化績效盒鬚圖
+2.畫圖,coord_flip() 函數使xy軸資料對調
+3.結論:從圖中得出,男性的職業傷害件數七年來各年齡層的中位數高於女性
+```{r cache=TRUE, warning=FALSE}
+library(ggplot2)
+
+ggplot(data = od, aes(x = Gender , y = total )) +
+ geom_boxplot() + coord_flip() +   
+ labs( y = 'total', x = 'gender', 
+       title = 'occupational_disease: gender v.s. total')
+``` 
+
+### 在95%信賴區間中,不同性別的件數之範圍如下
+```{r cache=TRUE, warning=FALSE}
+#以下函式計算95%信賴區間
+with(od,
+     tapply(total, Gender,
+     function(x) 
+       c(mean(x) + c(-2, 2) * sd(x)/sqrt(length(x)))))
+```
+## 以下用 t-test 檢驗不同性別是否存在件數差異
+```{r cache=TRUE, warning=FALSE}
+#此函數會預設進行 Welch 校正，以處理兩樣本變異數不相同的問題
+t.test( total~ Gender, data = od)
+
+#可加上參數 var.equal=TRUE 來假設變異數同值(不做Welch校正)
+t.test(total~ Gender, data = od, var.equal = TRUE)
+```
+## Part B. 年齡層  vs 件數
+```{r}
+library(Hmisc)
+```
+
+```{r}
+#看不同年齡下的職業傷害件數平均數
+tapply(od$total, od$Industry.Sector, mean)
+```
+
+```{r}
+#同父母教育程度下的數學分數平均數，加上信賴區間
+ggplot(data = od,  
+       aes(x = Industry.Sector, y = total )) +
+  stat_summary(fun.data = 'mean_cl_boot', size = 0.5) +
+  scale_y_continuous(breaks = seq(0,4200, by = 500)) +
+  geom_hline(yintercept = mean(od$total) , 
+             linetype = 'dotted') +
+  labs(x = 'Age.Group ', y = 'total') +
+  coord_flip()
+
+```
+
+### p<2.2e-16, 行業類別與職業傷害件數平均數有顯著差異
+```{r}
+anova(m1 <- lm(total ~ Industry.Sector, data = od))
+```
+
+```{r}
+ggplot(data = od, 
+       aes(group = Industry.Sector, 
+          y = total, x = Gender)) +
+  geom_point() +
+  stat_smooth(method = 'lm', se = F) +
+  stat_smooth(aes(group = Industry.Sector, 
+          y = total, x = Gender), 
+          method = 'lm', se = F) + 
+  facet_grid( . ~  Industry.Sector) +
+  labs(x = '職業類別', y = '件數')
+```
+```{r}
+ggplot(data = od, 
+       aes(group = Industry.Sector, 
+          y = total, x = Age.Group)) +
+  geom_point() +
+  stat_smooth(method = 'lm', se = F) +
+  stat_smooth(aes(group = Industry.Sector, 
+          y = total, x = Age.Group), 
+          method = 'lm', se = F) + 
+  facet_grid( . ~  Industry.Sector) +
+  labs(x = '職業類別', y = '件數')
+```
+
+### 利用以下 ANOVA 檢驗假設是否正確
+```{r}
+#把性別加進模型
+anova(m2 <- update(m1, . ~ . + 
+            Gender, data = od))
+```
+
+```{r}
+#或許不是職業類別而是性別造成
+anova(m3 <- update(m2, . ~ . - Industry.Sector,  data = od))
+```
+
+```{r}
+#將結果放在一個list中
+res_lm <- lapply(list(m1, m2, m3), summary)
+#比較在控制性別下，職業類別的效果
+(res_lm[[2]]$r.sq - res_lm[[3]]$r.sq)/res_lm[[2]]$r.sq
+```
+
+```{r}
+#比較在控制職業類別下，性別的效果
+(res_lm[[2]]$r.sq - res_lm[[1]]$r.sq)/res_lm[[1]]$r.sq
+```
+
+```{r}
+anova(m1, m2)
+```
+
+```{r}
+require(coefplot)
+m2 <- lm(total ~ parental.education+educational.resources- 1, 
+         data = dta)
+coefplot(m2, xlab = '估計值', ylab = '迴歸變項', title = '反應變項 = 數學分數')
+```

@@ -1,3 +1,14 @@
 base
 dplyr
 ggplot2
+LaF
+bindrcpp
+lattice
+survival
+Formula
+Hmisc
+coefplot
+MASS
+carData
+car
+heplots

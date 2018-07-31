@@ -1,0 +1,420 @@
+Age Group,Industry Sector,Gender,2011,2012,2013,2014,2015,2016,2017
+15-19,Agriculture,Female,20,25,23,13,20,27,21
+15-19,Agriculture,Male,44,44,55,74,48,58,44
+15-19,Automotive,Female,6,6,8,12,9,12,9
+15-19,Automotive,Male,23,32,17,20,18,34,10
+15-19,Chemicals/Process,Female,2,1,0,1,0,0,2
+15-19,Chemicals/Process,Male,6,5,4,5,4,2,11
+15-19,Construction,Female,2,2,10,5,5,3,7
+15-19,Construction,Male,115,127,133,135,110,141,118
+15-19,Construction,Not Available,2,1,0,0,0,0,0
+15-19,Education,Female,27,24,30,28,28,29,29
+15-19,Education,Male,62,66,48,56,49,55,61
+15-19,Electrical,Female,1,0,0,0,0,2,2
+15-19,Electrical,Male,5,4,4,3,1,2,5
+15-19,Food,Female,4,7,4,7,9,7,9
+15-19,Food,Male,17,21,13,16,28,18,14
+15-19,Forestry,Female,0,1,0,0,3,2,0
+15-19,Forestry,Male,5,6,9,3,10,11,11
+15-19,Health Care,Female,16,22,19,29,33,31,24
+15-19,Health Care,Male,7,11,13,10,15,7,10
+15-19,Manufacturing,Female,20,14,15,20,15,20,31
+15-19,Manufacturing,Male,95,95,94,117,125,127,129
+15-19,Mining,Female,1,0,0,0,1,1,0
+15-19,Mining,Male,10,5,1,2,1,2,4
+15-19,Municipal,Female,12,12,19,13,10,14,19
+15-19,Municipal,Male,11,15,10,8,10,13,19
+15-19,Primary Metals,Female,0,0,1,0,0,0,0
+15-19,Primary Metals,Male,6,3,1,1,9,3,0
+15-19,Pulp & Paper,Female,1,1,0,0,0,0,0
+15-19,Pulp & Paper,Male,0,0,1,1,0,0,0
+15-19,Schedule 2,Female,50,38,52,61,71,79,82
+15-19,Schedule 2,Male,43,45,40,43,37,53,58
+15-19,Services,Female,399,424,454,437,514,529,671
+15-19,Services,Male,507,499,501,496,553,607,692
+15-19,Services,Not Available,0,1,0,0,0,0,1
+15-19,Transportation,Female,14,6,9,11,7,10,20
+15-19,Transportation,Male,76,67,75,72,76,84,78
+20-24,Agriculture,Female,40,55,46,55,46,58,64
+20-24,Agriculture,Male,122,152,162,181,186,164,187
+20-24,Automotive,Female,20,26,34,35,25,50,42
+20-24,Automotive,Male,103,96,100,79,85,91,85
+20-24,Chemicals/Process,Female,5,4,7,6,11,18,17
+20-24,Chemicals/Process,Male,40,44,26,22,33,34,44
+20-24,Construction,Female,8,17,22,17,21,18,23
+20-24,Construction,Male,530,515,524,521,543,565,636
+20-24,Construction,Not Available,1,0,0,0,0,0,1
+20-24,Education,Female,19,15,16,30,20,27,22
+20-24,Education,Male,18,15,7,14,11,13,15
+20-24,Electrical,Female,6,2,2,1,4,4,1
+20-24,Electrical,Male,24,22,35,22,23,25,32
+20-24,Food,Female,14,22,23,20,20,20,33
+20-24,Food,Male,64,91,58,64,56,75,59
+20-24,Forestry,Female,3,1,4,1,3,2,4
+20-24,Forestry,Male,14,9,18,17,24,21,23
+20-24,Health Care,Female,290,343,288,315,324,356,376
+20-24,Health Care,Male,47,42,31,37,42,46,44
+20-24,Health Care,Not Available,1,0,0,0,0,0,0
+20-24,Manufacturing,Female,93,79,86,69,72,102,119
+20-24,Manufacturing,Male,433,460,449,399,437,483,514
+20-24,Manufacturing,Not Available,0,1,0,0,0,0,0
+20-24,Mining,Female,3,3,0,1,2,0,1
+20-24,Mining,Male,23,25,12,12,15,11,8
+20-24,Municipal,Female,18,16,13,11,20,23,29
+20-24,Municipal,Male,16,25,25,27,19,17,23
+20-24,Municipal,Not Available,0,1,0,0,0,0,0
+20-24,Primary Metals,Female,0,1,0,1,0,0,2
+20-24,Primary Metals,Male,13,11,13,14,8,5,12
+20-24,Pulp & Paper,Female,0,0,0,0,0,1,1
+20-24,Pulp & Paper,Male,6,5,3,2,4,4,3
+20-24,Schedule 2,Female,181,158,187,180,188,248,291
+20-24,Schedule 2,Male,209,219,161,165,162,185,206
+20-24,Schedule 2,Not Available,1,0,0,0,0,1,0
+20-24,Services,Female,779,794,841,873,874,1049,1114
+20-24,Services,Male,1093,1177,1116,1013,1087,1266,1298
+20-24,Services,Not Available,2,0,0,0,0,0,1
+20-24,Transportation,Female,49,56,49,64,51,47,82
+20-24,Transportation,Male,308,315,307,275,243,281,353
+20-24,Transportation,Not Available,0,0,0,0,0,1,0
+25-29,Agriculture,Female,37,35,27,30,44,40,35
+25-29,Agriculture,Male,113,118,130,141,136,165,156
+25-29,Automotive,Female,29,28,40,26,21,33,38
+25-29,Automotive,Male,110,89,93,94,81,94,124
+25-29,Chemicals/Process,Female,18,17,17,11,13,16,21
+25-29,Chemicals/Process,Male,41,44,45,43,53,56,60
+25-29,Construction,Female,12,15,11,15,22,26,17
+25-29,Construction,Male,615,619,620,601,603,686,719
+25-29,Education,Female,23,32,18,19,16,25,19
+25-29,Education,Male,6,7,12,7,9,15,13
+25-29,Electrical,Female,7,7,6,4,7,9,3
+25-29,Electrical,Male,38,47,36,32,40,45,37
+25-29,Food,Female,29,26,31,18,16,31,24
+25-29,Food,Male,77,76,85,71,65,83,79
+25-29,Forestry,Female,2,2,0,0,1,3,2
+25-29,Forestry,Male,13,14,14,13,14,23,13
+25-29,Health Care,Female,625,663,601,566,586,635,619
+25-29,Health Care,Male,90,82,72,77,74,74,99
+25-29,Health Care,Not Available,2,0,0,0,0,0,0
+25-29,Manufacturing,Female,96,89,78,91,103,124,119
+25-29,Manufacturing,Male,507,526,491,497,458,515,578
+25-29,Manufacturing,Not Available,1,1,0,0,0,0,0
+25-29,Mining,Female,1,1,1,0,1,0,0
+25-29,Mining,Male,40,23,22,13,13,13,21
+25-29,Municipal,Female,13,13,11,14,15,9,21
+25-29,Municipal,Male,30,31,30,19,22,30,31
+25-29,Primary Metals,Female,0,1,3,0,2,2,0
+25-29,Primary Metals,Male,18,20,18,19,11,11,12
+25-29,Pulp & Paper,Female,2,0,0,1,0,0,2
+25-29,Pulp & Paper,Male,7,2,6,8,6,3,6
+25-29,Schedule 2,Female,462,410,412,435,422,502,622
+25-29,Schedule 2,Male,490,532,450,439,419,485,544
+25-29,Schedule 2,Not Available,2,0,0,0,0,0,0
+25-29,Services,Female,611,624,625,587,598,761,744
+25-29,Services,Male,957,935,903,918,924,1003,1057
+25-29,Services,Not Available,0,0,2,0,0,0,1
+25-29,Transportation,Female,68,71,72,80,64,80,99
+25-29,Transportation,Male,363,385,348,375,328,339,374
+30-34,Agriculture,Female,27,22,25,20,15,27,22
+30-34,Agriculture,Male,88,103,132,137,123,129,133
+30-34,Automotive,Female,49,28,40,46,35,42,45
+30-34,Automotive,Male,129,126,127,115,80,104,104
+30-34,Chemicals/Process,Female,21,11,13,9,19,20,21
+30-34,Chemicals/Process,Male,65,43,56,45,45,71,48
+30-34,Construction,Female,7,11,17,13,22,23,12
+30-34,Construction,Male,547,552,626,553,526,566,654
+30-34,Construction,Not Available,0,0,0,1,0,0,0
+30-34,Education,Female,15,24,19,25,18,33,30
+30-34,Education,Male,16,18,15,18,5,13,19
+30-34,Electrical,Female,9,7,12,4,6,9,3
+30-34,Electrical,Male,33,36,33,44,56,43,54
+30-34,Food,Female,32,29,28,18,24,27,24
+30-34,Food,Male,96,78,75,65,59,85,71
+30-34,Forestry,Female,1,0,1,0,2,2,2
+30-34,Forestry,Male,9,11,17,6,8,12,9
+30-34,Health Care,Female,578,587,609,612,606,655,664
+30-34,Health Care,Male,102,109,98,76,86,95,88
+30-34,Manufacturing,Female,104,106,114,104,86,100,96
+30-34,Manufacturing,Male,545,503,486,485,453,493,515
+30-34,Mining,Female,0,0,2,0,1,1,0
+30-34,Mining,Male,43,35,21,24,16,30,25
+30-34,Municipal,Female,11,10,14,6,21,14,18
+30-34,Municipal,Male,45,34,45,50,41,36,47
+30-34,Primary Metals,Female,1,0,1,0,1,1,2
+30-34,Primary Metals,Male,24,19,17,17,12,12,18
+30-34,Pulp & Paper,Female,0,0,0,0,2,2,1
+30-34,Pulp & Paper,Male,4,7,7,4,5,7,3
+30-34,Schedule 2,Female,627,578,615,619,596,667,745
+30-34,Schedule 2,Male,764,697,675,750,713,771,806
+30-34,Services,Female,494,433,497,439,471,505,510
+30-34,Services,Male,788,782,773,754,674,781,818
+30-34,Services,Not Available,2,0,0,0,0,0,1
+30-34,Transportation,Female,85,80,88,86,58,80,98
+30-34,Transportation,Male,384,373,355,364,324,357,360
+30-34,Transportation,Not Available,1,0,0,0,0,0,0
+30-34,Unknown,Female,0,0,0,0,0,1,0
+35-39,Agriculture,Female,23,30,22,22,14,18,21
+35-39,Agriculture,Male,79,83,88,99,89,100,105
+35-39,Agriculture,Not Available,0,0,1,0,0,0,0
+35-39,Automotive,Female,64,75,47,49,33,53,45
+35-39,Automotive,Male,180,176,131,137,114,139,125
+35-39,Chemicals/Process,Female,22,16,19,25,21,17,22
+35-39,Chemicals/Process,Male,69,64,45,51,36,59,58
+35-39,Construction,Female,17,8,14,18,22,9,12
+35-39,Construction,Male,454,455,469,474,452,522,562
+35-39,Construction,Not Available,1,0,0,0,0,0,0
+35-39,Education,Female,22,19,27,23,20,31,26
+35-39,Education,Male,23,16,15,24,14,17,12
+35-39,Electrical,Female,3,5,6,6,2,5,4
+35-39,Electrical,Male,37,30,32,33,28,32,43
+35-39,Food,Female,44,35,34,31,30,31,31
+35-39,Food,Male,99,116,76,77,87,80,82
+35-39,Forestry,Female,1,0,4,0,1,1,3
+35-39,Forestry,Male,15,5,13,10,10,10,18
+35-39,Health Care,Female,670,733,659,614,629,675,668
+35-39,Health Care,Male,99,94,93,92,89,93,73
+35-39,Health Care,Not Available,0,1,0,0,0,2,0
+35-39,Manufacturing,Female,135,152,121,97,94,120,106
+35-39,Manufacturing,Male,596,544,524,511,426,509,518
+35-39,Mining,Female,1,2,3,1,1,0,2
+35-39,Mining,Male,40,32,25,13,24,21,28
+35-39,Municipal,Female,17,22,11,22,12,21,17
+35-39,Municipal,Male,41,53,44,45,53,48,55
+35-39,Municipal,Not Available,1,0,0,0,0,0,0
+35-39,Primary Metals,Female,3,2,3,2,0,1,2
+35-39,Primary Metals,Male,29,29,13,25,11,21,25
+35-39,Pulp & Paper,Female,5,3,0,1,2,0,3
+35-39,Pulp & Paper,Male,5,12,4,13,5,6,6
+35-39,Schedule 2,Female,781,751,796,798,783,935,971
+35-39,Schedule 2,Male,888,911,808,769,752,834,881
+35-39,Schedule 2,Not Available,2,0,0,0,0,0,1
+35-39,Services,Female,581,520,464,424,431,518,536
+35-39,Services,Male,730,710,702,630,594,649,686
+35-39,Services,Not Available,0,1,0,0,0,0,1
+35-39,Transportation,Female,96,78,95,90,88,107,97
+35-39,Transportation,Male,473,441,384,379,307,338,350
+35-39,Transportation,Not Available,0,0,0,0,0,0,1
+40-44,Agriculture,Female,19,21,26,8,15,19,20
+40-44,Agriculture,Male,81,93,107,95,92,91,99
+40-44,Automotive,Female,96,76,77,77,61,70,72
+40-44,Automotive,Male,217,213,172,156,131,149,130
+40-44,Chemicals/Process,Female,38,31,25,31,25,34,28
+40-44,Chemicals/Process,Male,88,72,65,62,44,59,65
+40-44,Construction,Female,14,16,11,15,14,10,12
+40-44,Construction,Male,460,454,442,420,393,408,441
+40-44,Education,Female,34,36,41,40,30,33,34
+40-44,Education,Male,21,24,15,29,13,19,23
+40-44,Electrical,Female,4,4,1,5,6,5,4
+40-44,Electrical,Male,48,36,38,40,30,37,35
+40-44,Food,Female,52,44,46,28,46,40,43
+40-44,Food,Male,102,111,79,78,85,81,86
+40-44,Food,Not Available,2,0,0,0,0,0,0
+40-44,Forestry,Female,0,0,1,0,1,5,5
+40-44,Forestry,Male,16,17,14,16,8,17,18
+40-44,Health Care,Female,802,817,700,689,709,700,740
+40-44,Health Care,Male,117,111,95,98,107,93,94
+40-44,Health Care,Not Available,0,0,1,0,0,0,0
+40-44,Manufacturing,Female,190,164,127,157,97,132,141
+40-44,Manufacturing,Male,599,599,544,543,462,456,473
+40-44,Mining,Female,0,0,0,1,0,1,1
+40-44,Mining,Male,48,32,33,28,19,15,20
+40-44,Municipal,Female,19,27,19,11,24,16,17
+40-44,Municipal,Male,76,68,64,64,48,68,72
+40-44,Primary Metals,Female,2,0,2,3,0,3,3
+40-44,Primary Metals,Male,33,30,24,20,13,17,33
+40-44,Pulp & Paper,Female,0,3,2,2,0,1,1
+40-44,Pulp & Paper,Male,12,9,8,6,8,11,9
+40-44,Schedule 2,Female,892,858,892,892,950,1057,1113
+40-44,Schedule 2,Male,1003,921,974,910,893,855,886
+40-44,Schedule 2,Not Available,1,1,0,0,0,1,2
+40-44,Services,Female,640,597,557,545,483,552,557
+40-44,Services,Male,721,656,699,597,563,629,618
+40-44,Services,Not Available,0,0,0,0,0,1,0
+40-44,Transportation,Female,111,124,107,107,93,104,85
+40-44,Transportation,Male,527,462,417,412,381,425,379
+40-44,Unknown,Male,0,0,0,0,0,2,0
+45-49,Agriculture,Female,23,27,27,22,27,18,21
+45-49,Agriculture,Male,80,86,89,78,85,70,85
+45-49,Automotive,Female,129,96,83,86,63,81,94
+45-49,Automotive,Male,265,250,214,154,155,173,159
+45-49,Chemicals/Process,Female,47,46,34,30,28,32,30
+45-49,Chemicals/Process,Male,83,77,68,72,51,71,60
+45-49,Construction,Female,10,9,15,14,15,20,9
+45-49,Construction,Male,523,478,491,471,464,428,459
+45-49,Construction,Not Available,0,1,0,0,0,0,1
+45-49,Education,Female,48,44,45,38,46,46,37
+45-49,Education,Male,28,25,28,27,14,16,20
+45-49,Education,Not Available,0,0,1,0,0,0,0
+45-49,Electrical,Female,10,7,4,5,6,6,8
+45-49,Electrical,Male,55,40,26,39,35,41,31
+45-49,Food,Female,75,59,54,55,40,45,61
+45-49,Food,Male,107,114,93,84,88,91,90
+45-49,Forestry,Female,0,2,0,1,0,0,2
+45-49,Forestry,Male,28,21,10,11,17,17,11
+45-49,Health Care,Female,949,993,835,818,767,824,791
+45-49,Health Care,Male,110,138,114,112,110,99,127
+45-49,Manufacturing,Female,269,212,226,145,163,170,175
+45-49,Manufacturing,Male,781,686,623,616,519,616,507
+45-49,Manufacturing,Not Available,1,0,0,0,0,0,1
+45-49,Mining,Female,2,1,2,1,0,0,1
+45-49,Mining,Male,45,30,35,27,20,17,25
+45-49,Municipal,Female,23,31,22,27,25,21,30
+45-49,Municipal,Male,59,62,60,59,63,57,67
+45-49,Primary Metals,Female,5,3,2,5,1,1,4
+45-49,Primary Metals,Male,48,29,24,20,13,17,27
+45-49,Pulp & Paper,Female,4,3,3,2,1,6,0
+45-49,Pulp & Paper,Male,20,11,6,8,12,5,11
+45-49,Schedule 2,Female,1104,1086,1066,1094,1033,1092,1180
+45-49,Schedule 2,Male,1214,1114,1041,1038,897,962,1060
+45-49,Schedule 2,Not Available,0,1,1,1,0,0,0
+45-49,Services,Female,804,733,673,629,569,623,619
+45-49,Services,Male,740,759,679,604,609,606,649
+45-49,Services,Not Available,0,1,0,0,0,0,1
+45-49,Transportation,Female,122,109,110,102,92,94,118
+45-49,Transportation,Male,577,584,536,464,425,449,437
+45-49,Unknown,Female,0,0,0,0,0,1,0
+50-54,Agriculture,Female,21,27,24,27,19,18,14
+50-54,Agriculture,Male,60,59,72,62,76,90,70
+50-54,Automotive,Female,72,86,79,88,89,75,73
+50-54,Automotive,Male,211,243,164,188,161,200,159
+50-54,Automotive,Not Available,1,0,0,0,0,0,0
+50-54,Chemicals/Process,Female,42,28,36,25,33,36,43
+50-54,Chemicals/Process,Male,92,68,83,69,63,69,80
+50-54,Construction,Female,3,5,10,19,22,15,19
+50-54,Construction,Male,434,435,438,488,449,503,476
+50-54,Education,Female,67,54,50,76,64,58,63
+50-54,Education,Male,36,36,30,35,27,24,31
+50-54,Electrical,Female,12,6,4,6,7,6,3
+50-54,Electrical,Male,43,32,40,34,27,38,42
+50-54,Food,Female,61,63,55,54,51,62,68
+50-54,Food,Male,117,107,114,97,87,88,85
+50-54,Forestry,Female,1,1,1,0,0,2,3
+50-54,Forestry,Male,17,16,12,17,30,18,20
+50-54,Health Care,Female,873,968,935,907,822,963,892
+50-54,Health Care,Male,108,117,110,120,110,111,122
+50-54,Manufacturing,Female,258,220,225,206,191,235,218
+50-54,Manufacturing,Male,755,718,694,616,619,618,602
+50-54,Manufacturing,Not Available,1,0,0,0,0,0,0
+50-54,Mining,Female,0,1,1,1,2,2,2
+50-54,Mining,Male,35,28,33,24,28,23,26
+50-54,Municipal,Female,34,24,24,27,27,28,34
+50-54,Municipal,Male,75,50,53,68,61,70,83
+50-54,Primary Metals,Female,5,5,5,5,4,1,6
+50-54,Primary Metals,Male,46,52,43,41,30,31,26
+50-54,Pulp & Paper,Female,5,1,0,5,2,3,8
+50-54,Pulp & Paper,Male,28,9,22,8,8,7,10
+50-54,Schedule 2,Female,1126,1193,1232,1137,1154,1374,1404
+50-54,Schedule 2,Male,1077,1030,1055,1082,989,1031,1091
+50-54,Schedule 2,Not Available,4,1,0,0,0,1,2
+50-54,Services,Female,828,758,723,725,718,739,807
+50-54,Services,Male,682,666,655,649,627,709,660
+50-54,Services,Not Available,1,0,0,0,0,1,2
+50-54,Transportation,Female,132,123,124,113,95,121,131
+50-54,Transportation,Male,533,527,526,590,484,505,504
+50-54,Transportation,Not Available,0,1,0,0,0,0,0
+55-59,Agriculture,Female,7,9,20,22,15,27,20
+55-59,Agriculture,Male,36,51,51,52,47,51,58
+55-59,Automotive,Female,63,47,41,38,46,60,55
+55-59,Automotive,Male,128,135,113,121,104,128,152
+55-59,Automotive,Not Available,1,0,0,0,0,0,0
+55-59,Chemicals/Process,Female,25,32,27,30,21,34,41
+55-59,Chemicals/Process,Male,57,68,58,69,64,77,65
+55-59,Construction,Female,4,6,9,7,10,8,11
+55-59,Construction,Male,232,272,318,310,340,375,389
+55-59,Education,Female,53,44,53,60,45,42,52
+55-59,Education,Male,33,19,26,37,23,30,31
+55-59,Electrical,Female,4,3,2,2,2,9,4
+55-59,Electrical,Male,23,20,25,23,32,29,36
+55-59,Food,Female,59,42,51,41,49,38,61
+55-59,Food,Male,77,65,76,81,86,88,94
+55-59,Food,Not Available,1,0,0,0,0,0,0
+55-59,Forestry,Female,2,0,2,1,1,0,1
+55-59,Forestry,Male,9,12,13,24,17,20,18
+55-59,Health Care,Female,701,726,687,680,601,686,758
+55-59,Health Care,Male,81,90,82,89,84,93,109
+55-59,Manufacturing,Female,172,160,165,194,182,197,189
+55-59,Manufacturing,Male,513,525,535,554,527,591,632
+55-59,Manufacturing,Not Available,0,1,0,0,0,0,0
+55-59,Mining,Female,0,1,2,0,1,0,1
+55-59,Mining,Male,20,28,26,17,18,20,21
+55-59,Municipal,Female,18,14,20,19,20,18,27
+55-59,Municipal,Male,50,44,60,50,41,50,43
+55-59,Primary Metals,Female,0,4,1,3,0,1,2
+55-59,Primary Metals,Male,45,33,22,22,27,19,34
+55-59,Pulp & Paper,Female,2,1,2,2,3,0,1
+55-59,Pulp & Paper,Male,13,12,9,11,12,14,11
+55-59,Schedule 2,Female,761,751,813,892,865,1016,1012
+55-59,Schedule 2,Male,710,670,686,739,731,776,775
+55-59,Services,Female,585,565,532,544,555,652,651
+55-59,Services,Male,505,501,512,569,510,568,588
+55-59,Services,Not Available,1,0,0,0,0,1,0
+55-59,Transportation,Female,66,69,68,94,69,98,100
+55-59,Transportation,Male,423,411,450,464,429,495,454
+60-64,Agriculture,Female,8,2,7,9,11,7,11
+60-64,Agriculture,Male,23,20,38,34,28,41,39
+60-64,Automotive,Female,14,8,19,23,34,30,38
+60-64,Automotive,Male,42,50,50,53,59,61,68
+60-64,Chemicals/Process,Female,13,8,13,17,12,19,19
+60-64,Chemicals/Process,Male,33,37,37,42,32,37,56
+60-64,Construction,Female,3,8,4,6,1,2,9
+60-64,Construction,Male,154,163,174,166,164,189,212
+60-64,Construction,Not Available,0,0,0,0,0,0,1
+60-64,Education,Female,24,34,31,36,32,29,35
+60-64,Education,Male,13,17,9,19,20,18,18
+60-64,Electrical,Female,0,1,4,2,3,2,5
+60-64,Electrical,Male,15,10,14,5,7,16,13
+60-64,Food,Female,14,22,37,20,23,30,25
+60-64,Food,Male,35,49,52,46,48,72,61
+60-64,Forestry,Female,2,0,0,0,1,0,1
+60-64,Forestry,Male,19,10,14,9,12,10,19
+60-64,Health Care,Female,359,392,369,373,386,419,421
+60-64,Health Care,Male,44,50,42,37,42,52,60
+60-64,Manufacturing,Female,90,95,106,90,99,143,123
+60-64,Manufacturing,Male,306,352,328,340,340,386,381
+60-64,Mining,Female,0,0,0,0,0,0,1
+60-64,Mining,Male,8,10,11,15,9,10,9
+60-64,Municipal,Female,7,5,7,10,10,12,17
+60-64,Municipal,Male,21,22,29,33,21,18,31
+60-64,Primary Metals,Female,2,1,0,0,1,0,0
+60-64,Primary Metals,Male,16,10,15,9,11,8,15
+60-64,Pulp & Paper,Female,4,1,2,0,1,1,0
+60-64,Pulp & Paper,Male,7,6,5,4,7,12,6
+60-64,Schedule 2,Female,389,391,391,405,425,480,490
+60-64,Schedule 2,Male,334,289,336,382,301,306,341
+60-64,Services,Female,349,326,355,317,324,381,408
+60-64,Services,Male,333,303,333,326,295,421,403
+60-64,Transportation,Female,37,30,32,43,49,61,61
+60-64,Transportation,Male,278,268,286,318,285,313,313
+65+,Agriculture,Female,5,2,4,1,2,3,5
+65+,Agriculture,Male,8,13,8,15,16,22,19
+65+,Automotive,Female,3,4,7,1,6,3,7
+65+,Automotive,Male,6,7,9,9,15,14,20
+65+,Chemicals/Process,Female,1,3,1,2,4,2,2
+65+,Chemicals/Process,Male,10,5,11,15,20,19,8
+65+,Construction,Female,1,1,2,3,1,2,2
+65+,Construction,Male,45,39,62,59,72,76,70
+65+,Education,Female,5,9,14,5,9,9,16
+65+,Education,Male,4,2,10,7,4,3,11
+65+,Electrical,Female,0,0,3,1,1,1,0
+65+,Electrical,Male,4,1,3,4,8,3,3
+65+,Food,Female,7,7,4,5,5,9,4
+65+,Food,Male,6,10,18,25,21,19,18
+65+,Forestry,Female,0,1,0,0,1,1,0
+65+,Forestry,Male,1,3,0,5,1,3,2
+65+,Health Care,Female,71,111,111,113,118,168,164
+65+,Health Care,Male,20,9,19,16,17,25,28
+65+,Manufacturing,Female,30,21,31,24,23,43,35
+65+,Manufacturing,Male,132,115,142,141,153,201,187
+65+,Mining,Male,5,4,1,4,9,2,3
+65+,Municipal,Female,4,1,8,4,5,5,3
+65+,Municipal,Male,10,8,10,7,9,11,14
+65+,Primary Metals,Female,0,0,0,0,0,1,0
+65+,Primary Metals,Male,5,5,3,10,7,7,7
+65+,Pulp & Paper,Female,0,0,1,1,0,0,0
+65+,Pulp & Paper,Male,1,4,1,2,3,4,3
+65+,Schedule 2,Female,92,88,117,135,131,154,166
+65+,Schedule 2,Male,94,88,115,137,104,115,138
+65+,Services,Female,123,106,117,133,148,180,161
+65+,Services,Male,144,145,167,203,210,198,243
+65+,Services,Not Available,1,0,0,0,0,1,0
+65+,Transportation,Female,14,8,19,18,20,21,28
+65+,Transportation,Male,95,98,136,134,122,160,160
