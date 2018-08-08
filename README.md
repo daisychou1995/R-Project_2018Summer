@@ -31,3 +31,9 @@ I like to learn new things.This is my first time writing programs and I will try
   - 學習筆記4
   - 作業EDA [hw3_EDA](https://daisychou1995.github.io/R-Project_2018Summer/week3/hw3_EDA.html)
   - 作業TF-IDF_PCA_KMeans [hw3_TF_IDF](https://daisychou1995.github.io/R-Project_2018Summer/week3/TF_IDF/hw3_TF_IDF.html)
+
+##  Week4
+- 課中
+  - 深度EDA
+- 在家
+  - 作業Statistics and Regression[hw4_Regression](https://daisychou1995.github.io/R-Project_2018Summer/week4/hw4.html)
