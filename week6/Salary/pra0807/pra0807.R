@@ -14,6 +14,8 @@ library(ggplot2)
 library(dplyr)
 library(readr)
 library(readxl)
+library(rsconnect)
+
 
 
 a<- read_excel("001.xlsx")
@@ -90,8 +92,6 @@ ui <- navbarPage("問卷調查與薪水分析",
                             tabPanel("100~104行業平均數與中位數",
                                      DT::dataTableOutput("table1")
                             ),
-                            hr(),
-                            helpText("備註:平為平均數,中為中位數;資料來源:財政部統計處"),
                             
                             tabPanel("問卷調查",
                                      fluidRow(
