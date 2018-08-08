@@ -16,19 +16,19 @@ library(readr)
 library(readxl)
 
 
-問卷結果<- read_excel("001.xlsx")
+a<- read_excel("001.xlsx")
 
-all <- read.csv("100_104career_mean1.csv",header = TRUE)
+job <- read.csv("100_104career_mean1.csv",header = TRUE)
 salary <- read.csv("salary.csv",header = TRUE)
-qa<-
+
 
 # Define UI for application that draws a histogram
-ui <- navbarPage("Salary",
+ui <- navbarPage("問卷調查與薪水分析",
                  tabPanel("Plot1",
                           sidebarLayout(
                             sidebarPanel(
                               selectInput("mean", "平均數-行業別:", 
-                                          choices= colnames(all[2:8]) ,
+                                          choices= colnames(job[2:8]) ,
                                           selected = "所有行業"),
                               hr(),
                               helpText("資料來源:財政部統計處")
@@ -41,7 +41,7 @@ ui <- navbarPage("Salary",
                           sidebarLayout(
                             sidebarPanel(
                               selectInput("median", "中位數-行業別:", 
-                                          choices= colnames(all[9:15]) ,
+                                          choices= colnames(job[9:15]) ,
                                           selected = "所有行業"), 
                               hr(),
                               helpText("資料來源:財政部統計處")
@@ -52,7 +52,7 @@ ui <- navbarPage("Salary",
                           ),
                           sidebarLayout(
                             sidebarPanel(
-                              selectInput("qa_salary", "薪水-行業別:", 
+                              selectInput("qa_salary", "問卷調查薪水-行業別:", 
                                           choices= colnames(salary[2:15]) ,
                                           selected = "所有行業"),
                               hr(),
@@ -66,7 +66,7 @@ ui <- navbarPage("Salary",
                  ),
                  tabPanel(
                    "Plot2",
-                   titlePanel("勞動部職類別 初任人員薪資"),
+                   titlePanel("勞動部職類別 初任人員薪資(起薪)"),
                    
                    # Sidebar with a slider input for number of bins
                    sidebarLayout(
@@ -94,7 +94,45 @@ ui <- navbarPage("Salary",
                             helpText("備註:平為平均數,中為中位數;資料來源:財政部統計處"),
                             
                             tabPanel("問卷調查",
-                                     DT::dataTableOutput("table")
+                                     fluidRow(
+                                       column(3,
+                                              selectInput("性別",
+                                                          "性別",
+                                                          c("All",
+                                                            unique(as.character(a$性別))))
+                                       ),
+                                       column(3,
+                                              selectInput("畢業學系",
+                                                          "畢業學系",
+                                                          c("All",
+                                                            unique(as.character(a$畢業學系))))
+                                       ),
+                                       column(3,
+                                              selectInput("工作類別",
+                                                          "工作類別",
+                                                          c("All",
+                                                            unique(as.character(a$工作類別))))
+                                       ),
+                                       column(3,
+                                              selectInput("薪資狀態",
+                                                          "薪資狀態",
+                                                          c("All",
+                                                            unique(as.character(a$薪資狀態))))
+                                              
+                                              
+                                              
+                                              
+                                              
+                                       ),
+                                       # Create a new row for the table.
+                                       fluidRow(
+                                         DT::dataTableOutput("table")
+                                         
+                                       )
+                                       
+                                       
+                                     )
+                                
                             )
                             
                                      )
@@ -106,7 +144,7 @@ ui <- navbarPage("Salary",
 server <- function(input, output, session) {
   output$plot <- renderPlot({
     
-    barplot(all[,input$mean], 
+    barplot(job[,input$mean], 
             main=input$mean,
             names.arg = c("100","101","102","103","104"),
             ylab="count",
@@ -115,7 +153,7 @@ server <- function(input, output, session) {
   })
   print("finish render plot 1")
   output$plot2 <- renderPlot({    
-    barplot(all[,input$median], 
+    barplot(job[,input$median], 
             main=input$median,
             names.arg = c("100","101","102","103","104"),
             ylab="count",
@@ -146,9 +184,25 @@ server <- function(input, output, session) {
   output$table1 <- DT::renderDataTable({
     DT::datatable(all)
   })
-  output$table <- DT::renderDataTable({
-    DT::datatable()
-  })
+  output$table <- DT::renderDataTable(DT::datatable({
+    data <- a
+    if (input$性別 != "All") {
+      data <- data[a$性別 == input$性別,]
+    }
+    if (input$畢業學系 != "All") {
+      data <- data[a$畢業學系 == input$畢業學系,]
+    }
+    if (input$工作類別 != "All") {
+      data <- data[a$工作類別 == input$工作類別,]
+    }
+    if (input$ 薪資狀態 != "All") {
+      data <- data[a$薪資狀態  == input$薪資狀態 ,]
+      
+      
+    }
+    data
+  }))
+  
 }
 
 # Run the application 
