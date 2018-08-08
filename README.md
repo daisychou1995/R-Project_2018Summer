@@ -37,3 +37,6 @@ I like to learn new things.This is my first time writing programs and I will try
   - 深度EDA
 - 在家
   - 作業Statistics and Regression[hw4_Regression](https://daisychou1995.github.io/R-Project_2018Summer/week4/hw4.html)
+
+## Week6
+-[PPT](https://daisychou1995.github.io/R-Project_2018Summer/week6/PPT.pdf)
