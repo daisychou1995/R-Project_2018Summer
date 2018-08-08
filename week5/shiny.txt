@@ -1,0 +1,30 @@
+bug:明子不可以少於三個英文字
+
+ui: 
+使用者看得到
+
+逗點前後同位階
+
+第二個變數通常為說明
+
+server:
+只有寫程式時看到 閱讀者看不到
+
+ui調整 https://shiny.rstudio.com/gallery/widget-gallery.html
+
+介面樣式 https://shiny.rstudio.com/gallery/
+
+fluidPage 畫面呈現都劃在裡面,在外面就不同框
+
+mainpanel 裡為呈現圖對應server的"output$___"運作
+
+藍光盤銷量 和 出演主役作品 會部會影響 個人單曲銷量
+經紀公司如何操作??
+
+?人氣高的虛擬偶像長相是否雷同,
+  ptt  twitter 
+
+?不同系薪資起薪?五年後薪資
+個個語言系起薪 未來加薪
+
+?
